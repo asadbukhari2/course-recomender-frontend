@@ -1,0 +1,119 @@
+/* Colors */
+/*
+
+Solid Bright Base Color:     #fdfdfe;
+Light Bright Base Color:     #cfd4d7;
+Base Color:                  #bdc3c7;
+Light Dark Base Color:       #abb2b7;
+Solid Dark Base Color:       #7d8990;
+
+Solid Bright Green Color:    #52d88b;
+Light Bright Green Color:    #2dca6f;
+Green Color:                 #27ae60;
+Light Dark Green Color:      #219251;
+Solid Dark Green Color:      #17693a;
+
+Solid Bright Red Color:      #dc6f64;
+Light Bright Red Color:      #d3483a;
+Red Color:                   #c0392b;
+Light Dark Red Color:        #a43125;
+Dark Red Color:              #7b241b;
+
+Light Black Color:           #0e0e0e;
+Black Color:                 #060606;
+Solid Black Color:           #000;
+
+*/
+
+/*------------------------------------------------*/
+/* BASIC STYLE */
+/*------------------------------------------------*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background-color: #fff;
+  color: #060606;
+  font-family: 'Roboto', 'Arial', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  text-rendering: optimizeLegibility;
+  /*overflow-x: hidden;*/
+  overflow-x: visible;
+}
+
+body::-webkit-scrollbar { width: 0 }
+body {
+  overflow: -moz-scrollbars-none; /* Firefox */
+  -ms-overflow-style: none; /* IE */
+}
+
+/*-----------SECTION-----------*/
+
+section {
+  padding: 80px 0;
+  height: 100vh;
+}
+
+/*-----------HEADING-----------*/
+
+h1,
+h2,
+h3 {
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 0 0 20px 0;
+  color: #fff;
+  font-size: 240%;
+  word-spacing: 4px;
+  letter-spacing: 1px;
+}
+
+h2 {
+  font-size: 180%;
+  word-spacing: 2px;
+  text-align: center;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+}
+
+/*-----------LINKS-----------*/
+
+a:link,
+a:visited {
+  color: #060606;
+  text-decoration: none;
+  padding-bottom: 1px;
+  /*border-bottom: 1px solid transparent;*/
+  -webkit-transition: border-bottom 0.2s, color 0.2s;
+  transition: border-bottom 0.2s, color 0.2s;
+}
+
+a:hover,
+a:active {
+  color: #555;
+  /*border-bottom: 1px solid #060606;*/
+}
+
+h3 {
+  font-size: 110%;
+  margin: 15px 0;
+}
+
+h2:after {
+  display: block;
+  height: 2px;
+  background-color: #060606;
+  /*    background-color: #bdc3c7;*/
+  content: " ";
+  width: 100px;
+  margin: 30px auto 0 auto;
+}

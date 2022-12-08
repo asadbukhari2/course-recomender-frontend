@@ -1,0 +1,97 @@
+.Button{
+    display: inline-block;
+    border-radius: 50px;
+    /*background-color: #7d8990;*/
+    background-color: #bdc3c7;
+    border: 1px solid transparent;
+    color: #060606;
+    text-align: center;
+    font-size: 120%;
+    /*font-size: 28px;*/
+    padding: 10px 15px;
+    /*margin: 10px 15px;*/
+    width: 100%;
+    /*width: 175px;*/
+    transition: all 0.5s;
+    cursor: pointer;
+    /*  margin: 50px;*/
+    outline: none;
+}
+
+.Button:hover {
+    /*color: #555;*/
+    background-color: #7d8990;
+    /*background-color: #bdc3c7;*/
+}
+
+.button:hover a,
+.button:hover a:hover,
+.button:hover a:active {
+    color: #e3301e;
+    border-bottom: none;
+}
+
+/*.Button {*/
+/*    background-color: transparent;*/
+/*    display: inline-block;*/
+/*    padding: 10px 30px;*/
+/*    font-family: 'Lato', 'Arial', sans-serif;*/
+/*    font-size: 100%;*/
+/*    font-weight: 300;*/
+/*    text-decoration: none;*/
+/*    border-radius: 200px;*/
+/*    color: #bdc3c7;*/
+/*    transition: background-color 0.2s, border 0.2s, color 0.2s;*/
+/*}*/
+
+/*.Button:hover {*/
+/*    background-color: #7d8990;*/
+/*}*/
+
+.Button:disabled {
+    color: #fdfdfe;
+    cursor: not-allowed;
+}
+
+.ButtonFull {
+    background-color: #bdc3c7;
+    border: 1px solid #bdc3c7;
+    /*color: #060606;*/
+    margin-right: 15px;
+}
+
+.ButtonFull:hover {
+    /*color: #555;*/
+    border: 1px solid #7d8990;
+}
+
+.ButtonGhost {
+    border: 1px solid #7d8990;
+}
+
+.ButtonGhost:hover {
+    /*color: #555;*/
+    border: 1px solid #7d8990;
+}
+
+.Success {
+    background-color: #2ecc71;
+    border: 1px solid #2ecc71;
+    color: #fff;
+    margin-right: 15px;
+}
+
+.Success:hover{
+    border: 1px solid #25a25a;
+}
+
+.Danger {
+    background-color: #e74c3c;
+    border: 1px solid #e74c3c;
+    color: #fff;
+    margin-right: 15px;
+}
+
+.Danger:hover {
+    border: 1px solid #e3301e;
+}

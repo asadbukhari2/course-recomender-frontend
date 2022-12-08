@@ -1,0 +1,45 @@
+.SideDrawer{
+    display: none;
+}
+
+@media only screen and (max-width: 767px) {
+    .SideDrawer {
+        display: flex;
+        flex-flow: column;
+        position: fixed;
+        width: 280px;
+        max-width: 70%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        z-index: 200;
+        background-color: #bdc3c7;
+        padding: 32px 16px;
+        box-sizing: border-box;
+        transition: transform 0.3s ease-out;
+        overflow: hidden;
+    }
+}
+
+.Open {
+    transform: translateX(0);
+}
+
+.Close {
+    transform: translateX(-100%);
+}
+
+.Logo {
+    height: 20%;
+    margin-bottom: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*background-color: #7b241b;*/
+}
+
+.SearchBar{
+    display: flex;
+    /*background-color: #2ecc71;*/
+    justify-content: center;
+}
