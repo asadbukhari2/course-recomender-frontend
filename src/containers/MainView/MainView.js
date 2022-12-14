@@ -8,9 +8,7 @@ import Categories from "../Categories/Categories";
 import MainSlider from "../../components/MainSlider/MainSlider";
 import About from "../../components/About/About";
 
-function MainView(
-	props
-) {
+function MainView(props) {
 	return (
 		<Aux>
 			<MainSlider />

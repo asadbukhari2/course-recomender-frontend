@@ -1,6 +1,4 @@
-function Aux(
-	props
-) {
+function Aux(props) {
 	return props.children;
 }
 

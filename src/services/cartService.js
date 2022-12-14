@@ -1,13 +1,12 @@
-import Axios from '../axios-request'
-import {authHeader} from "./authHeader";
+import Axios from "../axios-request";
+import { authHeader } from "./authHeader";
 
 export const FetchCart = () => {
-    return Axios.get('cart', authHeader())
-        .then((response) => {
-            // console.log('response in fetchCart is : ', response)
-            return response
-        })
-}
+	return Axios.get("cart", authHeader()).then(response => {
+		// console.log('response in fetchCart is : ', response)
+		return response;
+	});
+};
 
 // export const SubmitCart = (data) => {
 //     // const cart = JSON.parse(localStorage.getItem('cart'))

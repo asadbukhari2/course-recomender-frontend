@@ -4,26 +4,11 @@ import classes from "./NavigationItems.module.css";
 import NavigationItem from "./NavigationItem/NavigationItem";
 import Aux from "../../../hoc/_Aux/_Aux";
 
-function NavigationItems(
-	props
-) {
+function NavigationItems(props) {
 	return (
-		<ul
-			className={
-				classes.NavigationItems
-			}>
-			<NavigationItem
-				link={
-					"/"
-				}>
-				Home
-			</NavigationItem>
-			<NavigationItem
-				link={
-					"/"
-				}>
-				About
-			</NavigationItem>
+		<ul className={classes.NavigationItems}>
+			<NavigationItem link={"/"}>Home</NavigationItem>
+			<NavigationItem link={"/"}>About</NavigationItem>
 			{/*{props.isAuthenticated*/}
 			{/*    ? <Aux>*/}
 			{/*        /!*<NavigationItem link={'/orders'}>Orders</NavigationItem>*!/*/}
@@ -34,27 +19,12 @@ function NavigationItems(
 			{/*}*/}
 			{!props.isAuthenticated ? (
 				<Aux>
-					<NavigationItem
-						link={
-							"/auth"
-						}>
-						Login
-					</NavigationItem>
-					<NavigationItem
-						link={
-							"/sign_up"
-						}>
-						Signup
-					</NavigationItem>
+					<NavigationItem link={"/auth"}>Login</NavigationItem>
+					<NavigationItem link={"/sign_up"}>Signup</NavigationItem>
 				</Aux>
 			) : (
 				// : <NavigationItem link={'/account'}>Account</NavigationItem>
-				<NavigationItem
-					link={
-						"/logout"
-					}>
-					Logout
-				</NavigationItem>
+				<NavigationItem link={"/logout"}>Logout</NavigationItem>
 			)}
 
 			{/*/!*<NavigationItem link={'/account'}>Account</NavigationItem>*!/*/}

@@ -1,6 +1,6 @@
-import React, {useState, useEffect, useRef} from 'react'
+import React, { useState, useEffect, useRef } from "react";
 
-import classes from './Toolbar.module.css'
+import classes from "./Toolbar.module.css";
 
 import Logo from "../../UI/Logo/Logo";
 import NavigationItems from "../NavigationItems/NavigationItems";
@@ -8,39 +8,38 @@ import Cart from "../../UI/Cart/Cart";
 import DrawerToggle from "../Side Drawer/DrawerToggle/DrawerToggle";
 
 function Toolbar(props) {
-    // const [toolbarShow, setToolbarShow] = useState(classes.Toolbar)
+	// const [toolbarShow, setToolbarShow] = useState(classes.Toolbar)
 
-    // const prev = useRef(window.scrollY)
+	// const prev = useRef(window.scrollY)
 
-    // const handleScroll = (e) => {
-    //     const window = e.currentTarget
-    //     prev.current = window.scrollY
-    // }
+	// const handleScroll = (e) => {
+	//     const window = e.currentTarget
+	//     prev.current = window.scrollY
+	// }
 
-    // useEffect(() => {
-    //     window.addEventListener('scroll', e => handleScroll(e))
-    // }, [])
+	// useEffect(() => {
+	//     window.addEventListener('scroll', e => handleScroll(e))
+	// }, [])
 
-    return (
-        <header className={classes.Toolbar}>
-            <DrawerToggle clicked={props.drawerToggleClicked}/>
+	return (
+		<header className={classes.Toolbar}>
+			<DrawerToggle clicked={props.drawerToggleClicked} />
 
-            <div className={classes.Logo}>
-                <Logo/>
-            </div>
+			<div className={classes.Logo}>
+				<Logo />
+			</div>
 
-            {/*<div className={classes.DesktopOnly}>*/}
-            {/*<SearchBar/>*/}
-            {/*</div>*/}
+			{/*<div className={classes.DesktopOnly}>*/}
+			{/*<SearchBar/>*/}
+			{/*</div>*/}
 
-            <nav className={classes.DesktopOnly}>
-                <NavigationItems isAuthenticated={props.isAuth}/>
-            </nav>
+			<nav className={classes.DesktopOnly}>
+				<NavigationItems isAuthenticated={props.isAuth} />
+			</nav>
 
-            <Cart/>
-
-        </header>
-    )
+			<Cart />
+		</header>
+	);
 }
 
-export default Toolbar
+export default Toolbar;

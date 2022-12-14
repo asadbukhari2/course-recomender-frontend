@@ -1,63 +1,32 @@
-import {
-	useState,
-	useEffect,
-} from "react";
+import { useState, useEffect } from "react";
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default httpClient => {
-	const [
-		error,
-		setError,
-	] =
-		useState(
-			null
-		);
+	const [error, setError] = useState(null);
 
-	const reqInterceptor =
-		httpClient.interceptors.request.use(
-			req => {
-				setError(
-					null
-				);
-				return req;
-			}
-		);
+	const reqInterceptor = httpClient.interceptors.request.use(req => {
+		setError(null);
+		return req;
+	});
 
-	const resInterceptor =
-		httpClient.interceptors.response.use(
-			res =>
-				res,
-			err => {
-				setError(
-					err
-				);
-			}
-		);
+	const resInterceptor = httpClient.interceptors.response.use(
+		res => res,
+		err => {
+			setError(err);
+		}
+	);
 
 	useEffect(() => {
 		return () => {
-			httpClient.interceptors.request.eject(
-				reqInterceptor
-			);
-			httpClient.interceptors.response.eject(
-				resInterceptor
-			);
+			httpClient.interceptors.request.eject(reqInterceptor);
+			httpClient.interceptors.response.eject(resInterceptor);
 		};
 		// eslint-disable-next-line react-hooks/exhaustive-deps
-	}, [
-		reqInterceptor,
-		resInterceptor,
-	]);
+	}, [reqInterceptor, resInterceptor]);
 
-	const errorConfirmedHandler =
-		() => {
-			setError(
-				null
-			);
-		};
+	const errorConfirmedHandler = () => {
+		setError(null);
+	};
 
-	return [
-		error,
-		errorConfirmedHandler,
-	];
+	return [error, errorConfirmedHandler];
 };
