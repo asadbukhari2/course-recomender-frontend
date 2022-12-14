@@ -1,5 +1,7 @@
-function Aux(props) {
-    return props.children
+function Aux(
+	props
+) {
+	return props.children;
 }
 
-export default Aux
+export default Aux;

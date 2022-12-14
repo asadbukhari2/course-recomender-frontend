@@ -1,26 +1,25 @@
-import React from 'react'
+import React from "react";
 
 // import classes from './MainView.module.css'
 
-import Aux from "../../hoc/Aux/Aux";
+import Aux from "../../hoc/_Aux/_Aux";
 
 import Categories from "../Categories/Categories";
 import MainSlider from "../../components/MainSlider/MainSlider";
 import About from "../../components/About/About";
 
-function MainView(props) {
+function MainView(
+	props
+) {
+	return (
+		<Aux>
+			<MainSlider />
 
-    return (
-        <Aux>
+			<Categories />
 
-            <MainSlider />
-
-            <Categories />
-
-            <About />
-
-        </Aux>
-    )
+			<About />
+		</Aux>
+	);
 }
 
-export default MainView
+export default MainView;
