@@ -1,42 +1,44 @@
-.Categories{
-    height: 750px;
-    overflow: hidden;
-    margin-top: -60px;
-    /*background-color: #bdc3c7;*/
+.Categories {
+	height: 750px;
+	overflow: hidden;
+	margin-top: -60px;
+	/*background-color: #bdc3c7;*/
 }
 
-.Categories h2:after{
-    /*margin-top: 15px;*/
+.Categories h2:after {
+	/*margin-top: 15px;*/
 }
 
-.Title{
-    color: white;
+.Title {
+	color: white;
 }
 
 .Title:after {
-    /*display: none;*/
-    background-color: white;
-    margin-top: 20px;
+	/*display: none;*/
+	background-color: white;
+	margin-top: 20px;
 }
 
-.Cards{
-    /*width: 270px;*/
-    /*height: 380px;*/
-    display: flex;
-    justify-content: space-around;
+.Cards {
+	/*width: 270px;*/
+	/*height: 380px;*/
+	display: flex;
+	justify-content: space-around;
 }
 
-.Card:first-of-type{
-    margin-bottom: 50px;
-    /*background-color: #3b5998;*/
+.Card:first-of-type {
+	margin-bottom: 50px;
+	/*background-color: #3b5998;*/
 }
 
-@media only screen and (max-width: 600px){
-    .Categories{height: 1200px;}
-    .Cards{
-        flex-flow: column;
-        justify-content: center;
-        align-items: center;
-        /*align-content: center;*/
-    }
+@media only screen and (max-width: 600px) {
+	.Categories {
+		height: 1200px;
+	}
+	.Cards {
+		flex-flow: column;
+		justify-content: center;
+		align-items: center;
+		/*align-content: center;*/
+	}
 }

@@ -1,213 +1,221 @@
-.Container{
-    position: relative;
-    width: 270px;
-    height: 380px;
-    /*height: auto;*/
-    margin-left: 25px;
-    background-color: rgba(255, 255, 255, 0.7);
+.Container {
+	position: relative;
+	width: 270px;
+	height: 380px;
+	/*height: auto;*/
+	margin-left: 25px;
+	background-color: rgba(255, 255, 255, 0.7);
 }
 
-.Image{
-    width: 270px;
-    height: 360px;
-    /*width: 150px;*/
-    /*height: 211px;*/
-    opacity: 1;
-    display: block;
-    /*width: 100%;*/
-    /*height: auto;*/
-    transition: .5s ease;
-    backface-visibility: hidden;
+.Image {
+	width: 270px;
+	height: 360px;
+	/*width: 150px;*/
+	/*height: 211px;*/
+	opacity: 1;
+	display: block;
+	/*width: 100%;*/
+	/*height: auto;*/
+	transition: 0.5s ease;
+	backface-visibility: hidden;
 }
 
-.WishListImage{
-    width: 150px;
-    height: 211px;
-    opacity: 1;
-    /*display: block;*/
-    transition: .5s ease;
-    backface-visibility: hidden;
+.WishListImage {
+	width: 150px;
+	height: 211px;
+	opacity: 1;
+	/*display: block;*/
+	transition: 0.5s ease;
+	backface-visibility: hidden;
 }
 
-.Middle{
-    background-color: rgba(255, 255, 255, 1);
-    width: 90%;
-    height: 50px;
-    transition: .5s ease;
-    opacity: 0;
-    /*opacity: 1;*/
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    text-align: center;
-    border-radius: 50px;
+.Middle {
+	background-color: rgba(255, 255, 255, 1);
+	width: 90%;
+	height: 50px;
+	transition: 0.5s ease;
+	opacity: 0;
+	/*opacity: 1;*/
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	text-align: center;
+	border-radius: 50px;
 }
 
 .Container:hover .WishListImage,
-.Container:hover .Image{
-    opacity: 0.3;
+.Container:hover .Image {
+	opacity: 0.3;
 }
 
-.Container:hover .Middle{
-    opacity: 1;
+.Container:hover .Middle {
+	opacity: 1;
 }
 
-.Rating{
-    margin: 15px 0 0 10px;
-    color: #e67e22;
-    /*background-color: red;*/
-    /*text-align: center;*/
+.Rating {
+	margin: 15px 0 0 10px;
+	color: #e67e22;
+	/*background-color: red;*/
+	/*text-align: center;*/
 }
 
-.Price{
-    margin: 5px 0 0 10px;
-    font-size: 24px;
+.Price {
+	margin: 5px 0 0 10px;
+	font-size: 24px;
 }
 
-.DetailWishListView{
-    height: 90px;
-    display: flex;
-    justify-content: space-between;
-    flex-flow: column;
-    /*background-color: #e67e22;*/
+.DetailWishListView {
+	height: 90px;
+	display: flex;
+	justify-content: space-between;
+	flex-flow: column;
+	/*background-color: #e67e22;*/
 }
 
-.DetailWishListView .DetailViewButton{
-    width: 120px;
-    font-size: 50%;
+.DetailWishListView .DetailViewButton {
+	width: 120px;
+	font-size: 50%;
 }
 
-.DetailView{
-    margin-right: 5px;
-    display: flex;
-    justify-content: space-between;
-    /*background-color: #2ecc71;*/
+.DetailView {
+	margin-right: 5px;
+	display: flex;
+	justify-content: space-between;
+	/*background-color: #2ecc71;*/
 }
 
-.DetailViewButton{
-    width: 100px;
-    font-size: 50%;
-    /*background-color: #e67e22;*/
+.DetailViewButton {
+	width: 100px;
+	font-size: 50%;
+	/*background-color: #e67e22;*/
 }
 
 .HeartSVG path,
 .BagSVG path {
-    transition: 250ms;
+	transition: 250ms;
 }
 
-.BagSVGNotAllowed path{
-    cursor: not-allowed;
+.BagSVGNotAllowed path {
+	cursor: not-allowed;
 }
 
-.BagSVG:hover path{
-    fill: #fdfdfe;
+.BagSVG:hover path {
+	fill: #fdfdfe;
 }
 
-.HeartSVG:hover path{
-    fill: #c0392b;
+.HeartSVG:hover path {
+	fill: #c0392b;
 }
 
-.ToolTip{
-    position: relative;
-    display: inline-block;
-    /*border-bottom: 1px dotted black;*/
+.ToolTip {
+	position: relative;
+	display: inline-block;
+	/*border-bottom: 1px dotted black;*/
 }
 
-.ToolTipText{
-    visibility: hidden;
-    width: 110px;
-    background-color: rgba(0, 0, 0, 0.8);
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px 0;
-    position: absolute;
-    z-index: 1;
-    bottom: 150%;
-    left: 50%;
-    margin-left: -60px;
-    font-size: 14px;
+.ToolTipText {
+	visibility: hidden;
+	width: 110px;
+	background-color: rgba(0, 0, 0, 0.8);
+	color: #fff;
+	text-align: center;
+	border-radius: 6px;
+	padding: 5px 0;
+	position: absolute;
+	z-index: 1;
+	bottom: 150%;
+	left: 50%;
+	margin-left: -60px;
+	font-size: 14px;
 }
 
 .ToolTipText::after {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: rgba(0, 0, 0, 0.8) transparent transparent transparent;
+	content: "";
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	margin-left: -5px;
+	border-width: 5px;
+	border-style: solid;
+	border-color: rgba(0, 0, 0, 0.8) transparent transparent transparent;
 }
 
-.ToolTip:hover .ToolTipText{
-    visibility: visible;
+.ToolTip:hover .ToolTipText {
+	visibility: visible;
 }
 
 .LeftInStockV1,
 .LeftInStockV2,
-.LeftInStockV3{
-    font-size: 80%;
-    margin: 5px 10px;
-    padding-bottom: 5px;
+.LeftInStockV3 {
+	font-size: 80%;
+	margin: 5px 10px;
+	padding-bottom: 5px;
 }
 
-.LeftInStockV1{color: #17693a;}
-.LeftInStockV2{color: #7b241b;}
-.LeftInStockV3{color: #0e0e0e;}
+.LeftInStockV1 {
+	color: #17693a;
+}
+.LeftInStockV2 {
+	color: #7b241b;
+}
+.LeftInStockV3 {
+	color: #0e0e0e;
+}
 
 /*--------WISHLIST DIALOG--------*/
-.DropDownWishList{
-    position: relative;
-    /*display: inline-block;*/
-    display: flex;
-    /*flex-flow: row;*/
-    flex-direction: column;
-    background-color: #e67e22;
+.DropDownWishList {
+	position: relative;
+	/*display: inline-block;*/
+	display: flex;
+	/*flex-flow: row;*/
+	flex-direction: column;
+	background-color: #e67e22;
 }
 
-.DropDownWishListCategories{
-    display: none;
-    /*display: block;*/
-    position: absolute;
-    background-color: rgba(0, 0, 0, 0.8);
-    width: 225px;
-    height: 150px;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    z-index: 1;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-    overflow: auto;
-    margin-left: -95px;
-}
-
-.DropDownWishListCategories::-webkit-scrollbar { width: 0 }
 .DropDownWishListCategories {
-    overflow: -moz-scrollbars-none; /* Firefox */
-    -ms-overflow-style: none; /* IE */
+	display: none;
+	/*display: block;*/
+	position: absolute;
+	background-color: rgba(0, 0, 0, 0.8);
+	width: 225px;
+	height: 150px;
+	color: #fff;
+	text-align: center;
+	border-radius: 6px;
+	z-index: 1;
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+	overflow: auto;
+	margin-left: -95px;
 }
 
-.ToolTip:hover .DropDownWishListCategories{
-    display: block;
+.DropDownWishListCategories::-webkit-scrollbar {
+	width: 0;
+}
+.DropDownWishListCategories {
+	overflow: -moz-scrollbars-none; /* Firefox */
+	-ms-overflow-style: none; /* IE */
 }
 
-.DropDownWishListCategoriesControl{
-    font-size: 50%;
-    /*width: 100px;*/
-    width: 90%;
-    height: 10px;
-    /*background-color: #2ecc71;*/
-    /*display: flex;*/
-    /*justify-content: flex-end;*/
-    margin: 0 5%;
-    /*align-content: center;*/
-    /*align-items: center;*/
+.ToolTip:hover .DropDownWishListCategories {
+	display: block;
+}
+
+.DropDownWishListCategoriesControl {
+	font-size: 50%;
+	/*width: 100px;*/
+	width: 90%;
+	height: 10px;
+	/*background-color: #2ecc71;*/
+	/*display: flex;*/
+	/*justify-content: flex-end;*/
+	margin: 0 5%;
+	/*align-content: center;*/
+	/*align-items: center;*/
 }
 
 /*.DropDownWishListCategoriesControls{*/
@@ -226,31 +234,31 @@
 /*    -ms-overflow-style: none; !* IE *!*/
 /*}*/
 
-.WishListMenu{
-    font-size: 150%;
-    cursor: pointer;
+.WishListMenu {
+	font-size: 150%;
+	cursor: pointer;
 }
 
-.BackWard{
-    left: 0;
-    margin: 0 100px;
-    /*margin-bottom: -25px;*/
-    padding: 0;
-    /*background-color: #3b5998;*/
-    /*text-align: left;*/
-    cursor: pointer;
+.BackWard {
+	left: 0;
+	margin: 0 100px;
+	/*margin-bottom: -25px;*/
+	padding: 0;
+	/*background-color: #3b5998;*/
+	/*text-align: left;*/
+	cursor: pointer;
 }
 
-.CategoryForm{
-    display: flex;
-    flex-flow: column;
-    width: 100%;
-    /*background-color: #3b5998;*/
+.CategoryForm {
+	display: flex;
+	flex-flow: column;
+	width: 100%;
+	/*background-color: #3b5998;*/
 }
 
-.CategoryCreateButton{
-    /*width: 120px;*/
-    align-self: center;
-    display: flex;
-    /*background-color: #2ecc71;*/
+.CategoryCreateButton {
+	/*width: 120px;*/
+	align-self: center;
+	display: flex;
+	/*background-color: #2ecc71;*/
 }

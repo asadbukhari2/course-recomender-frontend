@@ -1,22 +1,22 @@
 .SlideShowContainer {
-    width: 100%;
-    position: relative;
-    padding-right: 25px;
-    display: flex;
-    justify-content: space-between;
-    flex-flow: row;
-    flex-wrap: wrap;
-    /*background-color: #bdc3c7;*/
-    /*background-color: #e67e22;*/
+	width: 100%;
+	position: relative;
+	padding-right: 25px;
+	display: flex;
+	justify-content: space-between;
+	flex-flow: row;
+	flex-wrap: wrap;
+	/*background-color: #bdc3c7;*/
+	/*background-color: #e67e22;*/
 }
 
 /*----- Start Main Slider Style -----*/
 
-.MainSlideShowContainer{
-    max-width: 100%;
-    position: relative;
-    margin-top: -20px;
-    /*margin: -100px auto auto auto;*/
+.MainSlideShowContainer {
+	max-width: 100%;
+	position: relative;
+	margin-top: -20px;
+	/*margin: -100px auto auto auto;*/
 }
 
 /*.Text {*/
@@ -36,49 +36,50 @@
 /*}*/
 
 .NumberText {
-    /*color: #f2f2f2;*/
-    color: #060606;
-    font-size: 12px;
-    padding: 8px 12px;
-    position: absolute;
-    top: 0;
+	/*color: #f2f2f2;*/
+	color: #060606;
+	font-size: 12px;
+	padding: 8px 12px;
+	position: absolute;
+	top: 0;
 }
 
 /*----- End Main -----*/
 
-.Prev, .Next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    margin-top: -22px;
-    padding: 16px;
-    color: white;
-    /*background-color: transparent;*/
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-    border: none;
-    /*background-color: #bdc3c7;*/
+.Prev,
+.Next {
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	width: auto;
+	margin-top: -22px;
+	padding: 16px;
+	color: white;
+	/*background-color: transparent;*/
+	background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+	font-weight: bold;
+	font-size: 18px;
+	transition: 0.6s ease;
+	border-radius: 0 3px 3px 0;
+	user-select: none;
+	border: none;
+	/*background-color: #bdc3c7;*/
 }
 
 .Next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-    /*background-color: red;*/
+	right: 0;
+	border-radius: 3px 0 0 3px;
+	/*background-color: red;*/
 }
 
 .Prev:hover,
 .Next:hover {
-    background-color: rgba(0,0,0,0.8);
+	background-color: rgba(0, 0, 0, 0.8);
 }
 
-.SlideShowData{
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    /*background-color: #e67e22;*/
+.SlideShowData {
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	/*background-color: #e67e22;*/
 }
