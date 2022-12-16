@@ -1,5 +1,3 @@
-import React, { useState, useEffect, useRef } from "react";
-
 import classes from "./Toolbar.module.css";
 
 import Logo from "../../UI/Logo/Logo";
@@ -24,14 +22,11 @@ function Toolbar(props) {
 	return (
 		<header className={classes.Toolbar}>
 			<DrawerToggle clicked={props.drawerToggleClicked} />
-
-			<div className={classes.Logo}>
-				<Logo />
-			</div>
-
-			{/*<div className={classes.DesktopOnly}>*/}
-			{/*<SearchBar/>*/}
-			{/*</div>*/}
+			{!props.isSideDrawerVisible && (
+				<div className={classes.Logo}>
+					<Logo />
+				</div>
+			)}
 
 			<nav className={classes.DesktopOnly}>
 				<NavigationItems isAuthenticated={props.isAuth} />

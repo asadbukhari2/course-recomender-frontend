@@ -9,7 +9,7 @@ import InstagramSVG from "../../hoc/SVGIcons/InstagramSVG";
 import TwitterSVG from "../../hoc/SVGIcons/TwitterSVG";
 import WhatsAppSVG from "../../hoc/SVGIcons/WhatsAppSVG";
 
-function Footer(props) {
+function Footer() {
 	return (
 		<footer>
 			{/*<div className={classes.FooterIcons}>*/}
@@ -100,11 +100,5 @@ function Footer(props) {
 		</footer>
 	);
 }
-
-// function Footer(props) {
-//     return (
-//         <div>Footer</div>
-//     )
-// }
 
 export default Footer;

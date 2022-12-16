@@ -89,13 +89,13 @@ function App(props) {
 
 	/*----Effects Section----*/
 
-	const fetchCoursesData = useCallback(() => {
-		fetchCourses().then(products => {
-			dispatch("FETCH_COURSES", products);
-		});
+	// const fetchCoursesData = useCallback(() => {
+	// 	fetchCourses().then(products => {
+	// 		dispatch("FETCH_COURSES", products);
+	// 	});
 
-		console.log("state after fetching courses is : ", state);
-	}, []);
+	// 	console.log("state after fetching courses is : ", state);
+	// }, []);
 
 	useEffect(() => {
 		if (_Mounted.current === true) {
@@ -191,7 +191,6 @@ function App(props) {
 	);
 
 	if (isAuthenticated) {
-		console.log(isAuthenticated)
 		routes = (
 			<Switch>
 				<Route path={"/courses"} render={props => <Courses {...props} />} />
@@ -217,7 +216,6 @@ function App(props) {
 				{/*<Suspense fallback={<p>Loading</p>}>*/}
 				<Suspense fallback={<Spinner />}>{routes}</Suspense>
 			</Layout>
-			{/*<Footer/>*/}
 		</div>
 	);
 }

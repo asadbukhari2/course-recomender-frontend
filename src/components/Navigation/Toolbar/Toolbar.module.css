@@ -26,8 +26,8 @@
 
 .Logo {
 	/*width: 100px;*/
-	height: 80px;
-	/*height: auto;*/
+	/* height: 80px; */
+	height: auto;
 	/*background-color: #3b5998;*/
 }
 
