@@ -94,7 +94,7 @@ function DegreeSemester(props) {
 				className={classes.SubmitButton}
 				onClick={toggleDegreeSemesterHandler}>
 				<NavLink to={"courses"}>
-					<Button btnType={"ButtonGhost"}>Filter</Button>
+					<Button>Filter</Button>
 				</NavLink>
 			</div>
 		</section>

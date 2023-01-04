@@ -29,7 +29,7 @@ function Courses(props) {
 	const sideDrawerToggleHandler = () => {
 		setSideDrawerIsVisible(!sideDrawerIsVisible);
 	};
-	console.log("state", state)
+	console.log("state", state);
 	let coursesToRender = null;
 	if (state.auth.loading) {
 		coursesToRender = <Spinner />;
@@ -54,7 +54,7 @@ function Courses(props) {
 			// } else if (state.course.filterItem.length > 0) {
 			console.log("coursesToRender filterItem");
 			coursesToRender = state.course.filterItem.map(fItem => (
-				<div key={fItem.id}>fgfdg
+				<div key={fItem.id}>
 					<Course fItem={fItem} />
 				</div>
 			));

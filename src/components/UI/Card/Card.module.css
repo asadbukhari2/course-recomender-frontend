@@ -1,13 +1,11 @@
 .Card {
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 	transition: 0.3s;
-	width: 270px;
+	width: 300px;
 	height: auto;
-	/*height: 380px;*/
-	/*width: 50vh;*/
-	/*width: 350px;*/
 	overflow: hidden;
 	background-color: rgba(6, 6, 6, 0.6);
+	border-radius: 10px;
 }
 
 .Card:hover {
@@ -15,10 +13,8 @@
 }
 
 .Image {
-	width: 270px;
-	height: 380px;
-	/*height: 60vh;*/
-	/*height: 400px;*/
+	width: 300px;
+	height: 350px;
 	transition: 300ms transform;
 }
 
@@ -36,28 +32,4 @@
 
 .Container p {
 	font-size: 17px;
-}
-
-@media only screen and (max-width: 1023px) {
-	/*.Card{ width: 35vh;}*/
-	/*.Image{ height: 50vh;}*/
-	/*.Container p{font-size: 15px;}*/
-}
-
-@media only screen and (max-width: 767px) {
-	/*.Card{ width: 30vh;}*/
-	/*.Image{height: 40vh;}*/
-	/*.Container{font-size: 17px;}*/
-	/*.Container p{font-size: 15px;}*/
-}
-
-@media only screen and (max-width: 480px) {
-	/*.Card{*/
-	/*    width: 40vh;*/
-	/*    margin-bottom: 35px;*/
-	/*}*/
-	/*.Image{ height: 50vh;}*/
-	/*.Container{*/
-	/*    font-size: 17px;*/
-	/*}*/
 }

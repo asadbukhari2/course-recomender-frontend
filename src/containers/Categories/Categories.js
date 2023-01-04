@@ -3,16 +3,12 @@ import { NavLink } from "react-router-dom";
 
 import baseClasses from "../../assets/css/base.module.css";
 import classes from "./Categories.module.css";
-
 import { useStore } from "../../hooks-store/store";
-
 import Card from "../../components/UI/Card/Card";
-
 import menImg from "../../assets/images/p1.jpg";
 import womenImg from "../../assets/images/p3.jpg";
 
-function Categories(props) {
-	const state = useStore()[0];
+function Categories() {
 	const dispatch = useStore()[1];
 
 	const toggleCampusCategoryHandler = () => {

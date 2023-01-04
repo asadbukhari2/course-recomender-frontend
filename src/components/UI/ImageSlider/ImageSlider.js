@@ -43,12 +43,19 @@ function ImageSlider(props) {
 						baseClasses.BackgroundImgOne,
 					].join(" ")}>
 					<div className={classes.Fade}>
-						<div className={classes.NumberText}>
+						{/* <div className={classes.NumberText}>
 							{index + 1}/{props.images.length}
-						</div>
-						<img src={props.images[index]} alt={index} />
+						</div> */}
+						<img
+							src={props.images[index]}
+							alt={index}
+							style={{
+								objectCover: "cover",
+								width: "",
+							}}
+						/>
 						{/*{productToView}*/}
-						<div className={classes.Text}>Caption Text {index + 1}</div>
+						{/* <div className={classes.Text}>image {index + 1}</div> */}
 					</div>
 					<button
 						className={[classes.Prev, classes.Fade].join(" ")}

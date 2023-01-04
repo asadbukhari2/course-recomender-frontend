@@ -42,7 +42,7 @@ function SideDrawerFilter(props) {
 			<div className={attachedClasses.join(" ")}>
 				<h3 className={classes.SideDrawerClose}>
 					<div className={classes.SideDrawerCloseDiv} onClick={props.closed}>
-						X
+						close
 					</div>
 				</h3>
 
