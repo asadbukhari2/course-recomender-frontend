@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import classes from "./DegreeSemester.module.css";
 
@@ -9,6 +9,7 @@ import baseClasses from "../../assets/css/base.module.css";
 import Button from "../../components/UI/Button/Button";
 import Spinner from "../../components/UI/Spinner/Spinner";
 import Course from "../../components/UI/Course/Course";
+import { fetchCourses } from "../../services/courseSerivces";
 
 function DegreeSemester(props) {
 	const [degree, setDegree] = useState("1");
@@ -44,6 +45,13 @@ function DegreeSemester(props) {
 	//         coursesToRender = <div> No Courses !</div>
 	//     }
 	// }
+
+	useEffect(() => {
+		fetchCourses().then(courses => {
+			console.log("response after hitting courses endpoint : ", courses);
+			dispatch("FETCH_COURSES", courses);
+		});
+	}, []);
 
 	const toggleDegreeSemesterHandler = () => {
 		const data = {

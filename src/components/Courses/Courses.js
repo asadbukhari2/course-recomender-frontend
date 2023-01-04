@@ -8,7 +8,7 @@ import Spinner from "../UI/Spinner/Spinner";
 import SideDrawerFilter from "../UI/Side Drawer Filter/SideDrawerFilter";
 import Course from "../UI/Course/Course";
 
-function Courses(props) {
+function Courses() {
 	const [sideDrawerIsVisible, setSideDrawerIsVisible] = useState(false);
 
 	const state = useStore()[0];
@@ -29,13 +29,12 @@ function Courses(props) {
 	const sideDrawerToggleHandler = () => {
 		setSideDrawerIsVisible(!sideDrawerIsVisible);
 	};
-	console.log("state", state);
+	console.log("state in courses", state);
 	let coursesToRender = null;
 	if (state.auth.loading) {
 		coursesToRender = <Spinner />;
 	} else {
-		if (state.course.difficulty === null || state.course.category === null) {
-			// if (state.course.filterCategoryOrDifficulty.length > 0) {
+		if (state.course.category !== null || state.course.difficulty !== null) {
 			console.log("coursesToRender filterCategoryOrDifficulty");
 			if (state.course.filterCategoryOrDifficulty.length > 0) {
 				coursesToRender = state.course.filterCategoryOrDifficulty.map(fItem => (
@@ -47,11 +46,10 @@ function Courses(props) {
 				coursesToRender = <h3> No Courses !</h3>;
 			}
 		} else if (
-			state.course.study_mode === null &&
+			state.course.study_mode !== null &&
 			state.course.degree !== null &&
 			state.course.semester !== null
 		) {
-			// } else if (state.course.filterItem.length > 0) {
 			console.log("coursesToRender filterItem");
 			coursesToRender = state.course.filterItem.map(fItem => (
 				<div key={fItem.id}>

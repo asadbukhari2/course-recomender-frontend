@@ -1,4 +1,5 @@
 import React from "react";
+import ReactStars from "react-rating-stars-component";
 
 import classes from "./Course.module.css";
 
@@ -80,6 +81,9 @@ function Course(props) {
 				</div>
 
 				<div className={classes.DetailView}>
+					<div className={classes.Title}>
+						<span>{props.fItem.name}</span>
+					</div>
 					<div className={classes.Price}>
 						<span>
 							Rs:

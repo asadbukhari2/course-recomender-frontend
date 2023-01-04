@@ -1,17 +1,10 @@
-import React, {
-	useState,
-	useEffect,
-	useCallback,
-	useRef,
-	Suspense,
-} from "react";
+import React, { useState, useEffect, useRef, Suspense } from "react";
 
 import { Route, Switch, withRouter, Redirect } from "react-router-dom";
 
 import { useStore } from "./hooks-store/store";
-import { FetchLogedInUser, VerifyUser } from "./services/authService";
+import { VerifyUser } from "./services/authService";
 import { FetchCart } from "./services/cartService";
-// import { FetchOrders } from "./services/orderServices";
 import { getCurrentUser } from "./services/authService";
 
 import Layout from "./hoc/Layout/Layout";
@@ -19,9 +12,7 @@ import MainView from "./containers/MainView/MainView";
 import Logout from "./containers/Auth/Logout/Logout";
 import SignUp from "./containers/Auth/SignUp/SignUp";
 import SignIn from "./containers/Auth/SignIn/SignIn";
-// import { FetchWishList } from "./services/wishListService";
 import { fetchCourses } from "./services/courseSerivces";
-// import { FetchSale } from "./services/saleServices";
 import Spinner from "./components/UI/Spinner/Spinner";
 
 const Courses = React.lazy(() => {
@@ -32,49 +23,9 @@ const DegreeSemester = React.lazy(() => {
 	return import("./containers/DegreeSemester/DegreeSemester");
 });
 
-// const Checkout = React.lazy(() => {
-//     return import("./containers/Checkout/Checkout")
-// })
-
-// const Orders = React.lazy(() => {
-//     return import("./containers/Orders/Orders")
-// })
-
-// const OrderDetail = React.lazy(() => {
-//     return import("./components/OrderDetail/OrderDetail")
-// })
-
 const MyCart = React.lazy(() => {
 	return import("./containers/MyCart/MyCart");
 });
-
-// const DetailView = React.lazy(() => {
-//     return import("./components/UI/DetailView/DetailView")
-// })
-
-// const Auth = React.lazy(() => {
-//     return import("./containers/Auth/Auth")
-// })
-
-// const Account = React.lazy(() => {
-//     return import("./containers/Account/Account")
-// })
-
-// const WishList = React.lazy(() => {
-//     return import("./containers/WishList/WishList")
-// })
-
-// const LoginSecurity = React.lazy(() => {
-//     return import("./containers/Account/Login&Security/LoginSecurity")
-// })
-
-// const Sale = React.lazy(() => {
-//     return import("./containers/Sale/Sale")
-// })
-//
-// const SaleDetail = React.lazy(() => {
-//     return import("./components/UI/SaleDetail/SaleDetail")
-// })
 
 function App(props) {
 	/*----State Section----*/
@@ -89,25 +40,8 @@ function App(props) {
 
 	/*----Effects Section----*/
 
-	// const fetchCoursesData = useCallback(() => {
-	// 	fetchCourses().then(products => {
-	// 		dispatch("FETCH_COURSES", products);
-	// 	});
-
-	// 	console.log("state after fetching courses is : ", state);
-	// }, []);
-
 	useEffect(() => {
 		if (_Mounted.current === true) {
-			// FetchSale().then((response) => {
-			//     dispatch('FETCH_SALE', response)
-			// })
-
-			fetchCourses().then(courses => {
-				console.log("response after hitting courses endpoint : ", courses);
-				dispatch("FETCH_COURSES", courses);
-			});
-
 			console.log("state after fetching courses is : ", state);
 
 			if (localStorage.getItem("user")) {
@@ -116,26 +50,6 @@ function App(props) {
 						if (response) {
 							setIsAuthenticated(response);
 							dispatch("AUTH_SUCCESS", getCurrentUser().token);
-
-							// FetchLogedInUser(getCurrentUser().decodeUser.user_id)
-							//     .then((response) => {
-							//         dispatch('FETCH_USER', response)
-							//         // console.log('fetched LoginIn user in App.js Is : ', response)
-							//     })
-
-							// FetchWishList().then((response) => {
-							//     // console.log('Fetching WishList', response)
-							//     if (_Mounted.current) {
-							//         dispatch('FETCH_WISHLIST', response)
-							//     }
-							// })
-
-							// FetchOrders().then((response) => {
-							//     // console.log('Fetching order')
-							//     if (_Mounted.current) {
-							//         dispatch('FETCH_ORDERS', response)
-							//     }
-							// })
 
 							FetchCart().then(response => {
 								// console.log('Fetching cart')

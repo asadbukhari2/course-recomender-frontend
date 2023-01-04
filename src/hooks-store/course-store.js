@@ -20,15 +20,6 @@ const configureCoursesStore = () => {
 			return currState;
 		},
 
-		// DETAIL_PRODUCT: (currState, product) => {
-		//     console.log('DETAIL_PRODUCT')
-		//
-		//     currState.product.product = product
-		//     currState.product.scrollTop = true
-		//
-		//     return currState
-		// },
-
 		/*------Category Actions------*/
 
 		TOGGLE_CAMPUS: currState => {
@@ -109,10 +100,13 @@ const configureCoursesStore = () => {
 
 			currState.course.category = data.category;
 
+			console.log(currState.course.difficulty, currState.course);
+
 			if (currState.course.difficulty !== null) {
 				console.log("if difficulty");
+				// currState.course.filterCategoryOrDifficulty = ["l", "w"];
 				currState.course.filterCategoryOrDifficulty =
-					currState.course.courses.filter(
+					currState.course.filterItem.filter(
 						filterCourses =>
 							filterCourses.study_mode === currState.course.study_mode &&
 							filterCourses.degree === currState.course.degree &&
@@ -122,6 +116,24 @@ const configureCoursesStore = () => {
 					);
 			} else {
 				console.log("else difficulty");
+				// currState.course.filterCategoryOrDifficulty = ["l", "u"];
+				// const d = currState.course.courses.filter(filterCourses => {
+				// 	console.log(
+				// 		filterCourses.study_mode === currState.course.study_mode &&
+				// 			filterCourses.degree === currState.course.degree &&
+				// 			filterCourses.semester === currState.course.semester &&
+				// 			filterCourses.category === currState.course.category,
+				// 		filterCourses.category,
+				// 		currState.course.category
+				// 	);
+				// 	return (
+				// 		filterCourses.study_mode === currState.course.study_mode &&
+				// 		filterCourses.degree === currState.course.degree &&
+				// 		filterCourses.semester === currState.course.semester &&
+				// 		filterCourses.category === currState.course.category
+				// 	);
+				// });
+				// console.log(d);
 				currState.course.filterCategoryOrDifficulty =
 					currState.course.courses.filter(
 						filterCourses =>
@@ -131,7 +143,6 @@ const configureCoursesStore = () => {
 							filterCourses.category === currState.course.category
 					);
 			}
-
 			return currState;
 		},
 
@@ -139,9 +150,10 @@ const configureCoursesStore = () => {
 			console.log("TOGGLE_DIFFICULTY");
 
 			currState.course.difficulty = data.difficulty;
-
+			console.log(currState.course.category);
 			if (currState.course.category !== null) {
 				console.log("if category");
+				// currState.course.filterCategoryOrDifficulty = ["l", "p"];
 				currState.course.filterCategoryOrDifficulty =
 					currState.course.courses.filter(
 						filterCourses =>
@@ -152,7 +164,8 @@ const configureCoursesStore = () => {
 							filterCourses.difficulty === currState.course.difficulty
 					);
 			} else {
-				console.log("if category");
+				console.log("if not category");
+				// currState.course.filterCategoryOrDifficulty = ["l", "f"];
 				currState.course.filterCategoryOrDifficulty =
 					currState.course.courses.filter(
 						filterCourses =>
@@ -201,11 +214,6 @@ const configureCoursesStore = () => {
 			difficulty: null,
 			filterItem: [],
 			filterCategoryOrDifficulty: [],
-
-			// product: null,
-			// loading: false,
-			// purchased: false,
-			// message: ''
 		},
 	});
 };

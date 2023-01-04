@@ -8,7 +8,7 @@ function NavigationItems(props) {
 	return (
 		<ul className={classes.NavigationItems}>
 			<NavigationItem link={"/"}>Home</NavigationItem>
-			<NavigationItem link={"/"}>About</NavigationItem>
+			{/* <NavigationItem link={"/"}>About</NavigationItem> */}
 			{/* {props.isAuthenticated ? (
 				<Aux>
 					<NavigationItem link={"/orders"}>Orders</NavigationItem>
