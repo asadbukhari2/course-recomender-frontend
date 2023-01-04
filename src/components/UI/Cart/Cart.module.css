@@ -34,7 +34,7 @@
 	/*margin-left: 2px;*/
 	/*padding-left: 3px;*/
 	/*font-size: 17px;*/
-	width: 77px;
+	width: 80px;
 	letter-spacing: 1px;
 	line-height: 1.1;
 }
@@ -45,7 +45,10 @@
 	line-height: 0.8rem;
 	/*text-align: center;*/
 }
-
+.cart {
+	font-size: 18px;
+	font-weight: 500;
+}
 /*.Text:hover{*/
 /*    color: #e3301e;*/
 /*}*/

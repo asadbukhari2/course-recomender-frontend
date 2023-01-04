@@ -13,7 +13,7 @@ function Slider(props) {
 	}
 
 	let productToView;
-	// console.log('width is : ', width)
+	// console.log("width is : ", width);
 	if (props.styleFor === "featured") {
 		if (width > 1800) {
 			productToView = propsChildren.slice(index, index + 6).map(child => {
@@ -54,16 +54,14 @@ function Slider(props) {
 	}
 
 	const slideLeft = () => {
-		{
-			// console.log('in slide left : ', props)
-		}
+		// console.log("in slide left : ", props);
+
 		setIndex((index + 1) % props.images.length);
 	};
 
 	const slideRight = () => {
-		{
-			// console.log('in slide Right : ', props)
-		}
+		// console.log("in slide Right : ", props);
+
 		const nextIndex = index - 1;
 		if (nextIndex < 0) {
 			setIndex(props.images.length - 1);

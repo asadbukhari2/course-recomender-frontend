@@ -6,6 +6,8 @@
 
 ---
 
+## required node version
+
 node 16.10.0
 
 nvm use

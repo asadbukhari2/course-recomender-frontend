@@ -42,7 +42,7 @@ function Cart(props) {
 							<BagSVG
 								name={"bag"}
 								fill={"#bdc3c7"}
-								width={60}
+								width={50}
 								className={classes.BagSVG}
 							/>
 							<div className={classes.SvgBagItems}>
@@ -99,7 +99,7 @@ function Cart(props) {
 						// exact={props.exact}
 						to={"/cart"}>
 						<div className={classes.CartDescription}>
-							<p>My Cart</p>
+							<p className={classes.cart}>Cart</p>
 							<p className={classes.Text}>
 								<span className={classes.Price}>{items}&nbsp;</span>
 								items

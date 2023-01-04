@@ -23,11 +23,10 @@ function Layout(props) {
 
 	return (
 		<Aux>
-			{/*<div>Toolbar, SideDrawerFilter, Backdrop</div>*/}
-			{/*<div className={classes.Header}>*/}
 			<Toolbar
 				isAuth={props.isAuthenticated}
 				drawerToggleClicked={sideDrawerToggleHandler}
+				isSideDrawerVisible={sideDrawerIsVisible}
 			/>
 
 			<SideDrawer
@@ -37,7 +36,6 @@ function Layout(props) {
 				opened={sideDrawerOpenHandler}
 			/>
 
-			{/*</div>*/}
 			<main className={classes.Content}>{props.children}</main>
 
 			<Footer />

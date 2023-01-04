@@ -1,17 +1,13 @@
 .Logo {
-	height: 95%;
-	/*height: 70px;*/
-	/*width: 100px;*/
-	/*width: auto;*/
-	/*display: flex;*/
-	/*background-color: #e74c3c;*/
-	/*flex-flow: row;*/
-	top: 0;
-	margin-bottom: 2px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .LogoText {
-	margin-top: 10px;
+	font-weight: 900;
+	margin-top: 25px;
+	margin-left: 6px;
 }
 
 .LogoText:after {
