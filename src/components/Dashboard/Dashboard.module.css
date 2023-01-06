@@ -12,13 +12,15 @@
 }
 .Picture {
 	width: 30%;
-	margin-top: 10px;
+	height: 300px;
+	margin-top: 20px;
 }
 .Picture img {
 	border: 1px solid black;
 	border-radius: 50%;
-	object-fit: cover;
-	width: 250px;
+	object-fit: contain;
+	width: 200px;
+	height: 200px;
 }
 .Detail {
 	width: 70%;

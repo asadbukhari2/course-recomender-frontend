@@ -1,10 +1,9 @@
 import React, { useState, useEffect, useRef, Suspense } from "react";
 
-import { Route, Switch, withRouter } from "react-router-dom";
+import { Redirect, Route, Switch, withRouter } from "react-router-dom";
 
 import { useStore } from "./hooks-store/store";
 import { VerifyUser } from "./services/authService";
-import { FetchCart } from "./services/cartService";
 import { getCurrentUser } from "./services/authService";
 
 import Layout from "./hoc/Layout/Layout";
@@ -13,7 +12,6 @@ import Logout from "./containers/Auth/Logout/Logout";
 import SignUp from "./containers/Auth/SignUp/SignUp";
 import SignIn from "./containers/Auth/SignIn/SignIn";
 import Spinner from "./components/UI/Spinner/Spinner";
-import { fetchCourses } from "./services/courseSerivces";
 
 const Courses = React.lazy(() => {
 	return import("./components/Courses/Courses");
@@ -40,66 +38,29 @@ function App() {
 
 	useEffect(() => {
 		if (_Mounted.current === true) {
-			fetchCourses().then(courses => {
-				console.log("response after hitting courses endpoint : ", courses);
-				dispatch("FETCH_COURSES", courses);
-			});
-
-			console.log("state after fetching courses is : ", state);
-
 			if (localStorage.getItem("user")) {
 				VerifyUser().then(response => {
 					if (_Mounted.current) {
 						if (response) {
 							setIsAuthenticated(response);
 							dispatch("AUTH_SUCCESS", getCurrentUser().token);
-
-							// FetchLogedInUser(getCurrentUser().decodeUser.user_id)
-							//     .then((response) => {
-							//         dispatch('FETCH_USER', response)
-							//         // console.log('fetched LoginIn user in App.js Is : ', response)
-							//     })
-
-							// FetchWishList().then((response) => {
-							//     // console.log('Fetching WishList', response)
-							//     if (_Mounted.current) {
-							//         dispatch('FETCH_WISHLIST', response)
-							//     }
-							// })
-
-							// FetchOrders().then((response) => {
-							//     // console.log('Fetching order')
-							//     if (_Mounted.current) {
-							//         dispatch('FETCH_ORDERS', response)
-							//     }
-							// })
-
-							FetchCart().then(response => {
-								// console.log('Fetching cart')
-								let newUpdatedCart = [];
-
-								if (localStorage.getItem("cart")) {
-									const oldCart = JSON.parse(localStorage.getItem("cart"));
-									dispatch("FETCH_CART", oldCart);
-								} else {
-									dispatch("FETCH_CART", newUpdatedCart);
-								}
-							});
 						} else {
-							if (localStorage.getItem("cart")) {
-								const oldCart = JSON.parse(localStorage.getItem("cart"));
-								dispatch("FETCH_CART", oldCart);
-							}
+							// if (localStorage.getItem("cart")) {
+							// 	const oldCart = JSON.parse(localStorage.getItem("cart"));
+							// 	dispatch("FETCH_CART", oldCart);
+							// }
 							setIsAuthenticated(false);
 							localStorage.removeItem("user");
 						}
 					}
 				});
-			} else if (localStorage.getItem("cart")) {
-				const oldCart = JSON.parse(localStorage.getItem("cart"));
-				dispatch("FETCH_CART", oldCart);
-				setIsAuthenticated(false);
-			} else {
+			}
+			// else if (localStorage.getItem("cart")) {
+			// 	const oldCart = JSON.parse(localStorage.getItem("cart"));
+			// 	dispatch("FETCH_CART", oldCart);
+			// 	setIsAuthenticated(false);
+			// }
+			else {
 				setIsAuthenticated(false);
 			}
 
@@ -107,13 +68,26 @@ function App() {
 				_Mounted.current = false;
 			};
 		}
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [VerifyUser]);
+
+	useEffect(() => {
+		console.log(isAuthenticated);
+		if (isAuthenticated) {
+			if (localStorage.getItem("cart")) {
+				const isLocalCart = JSON.parse(localStorage.getItem("cart"));
+				dispatch("FETCH_CART", isLocalCart);
+			}
+		}
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, [isAuthenticated]);
 
 	let routes = (
 		<Switch>
 			<Route path={"/auth"} render={props => <SignIn />} />
 			<Route path={"/sign_up"} render={props => <SignUp />} />
 			<Route path={"/"} exact component={MainView} />
+			<Redirect to={"/"} />
 		</Switch>
 	);
 
@@ -129,6 +103,7 @@ function App() {
 				<Route path={"/cart"} render={props => <MyCart {...props} />} />
 				<Route path={"/logout"} component={Logout} />
 				<Route path={"/dashboard"} exact component={Dashboard} />
+				<Redirect to={"/"} />
 			</Switch>
 		);
 	}

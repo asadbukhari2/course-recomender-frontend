@@ -62,7 +62,6 @@ function MyCart(props) {
 
 	if (state.cart.items) {
 		cart = state.cart.items.map(item => {
-			console.log("in cart", item);
 			grandTotal += item.total_price;
 			if (update) {
 				return (
@@ -148,7 +147,11 @@ function MyCart(props) {
 								alt={"course"}
 							/>
 						</td>
-						{props.styleFor === "hover" ? null : <td>{item.description}</td>}
+						{props.styleFor === "hover" ? null : (
+							<td style={{ fontSize: "12px" }}>
+								{item.description.substring(0)}
+							</td>
+						)}
 						<td>{Math.floor(item.price)}</td>
 						<td>{item.quantity}</td>
 						<td>{item.total_price}</td>

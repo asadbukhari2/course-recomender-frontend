@@ -1,7 +1,7 @@
 import Axios from "../axios-request";
 import { authHeader } from "./authHeader";
 
-export const FetchCart = () => {
+export const FetchCart = async () => {
 	return Axios.get("cart", authHeader()).then(response => {
 		// console.log('response in fetchCart is : ', response)
 		return response;

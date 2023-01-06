@@ -60,7 +60,7 @@ export const Login = async (username, password, login_as) => {
 export const FetchLogedInUser = async userId => {
 	return Axios.get("student/" + userId, authHeader())
 		.then(response => {
-			// console.log('FetchLogedInUser response is : ', response)
+			// console.log("FetchLogedInUser response is : ", response);
 			return response.data;
 		})
 		.catch(error => {

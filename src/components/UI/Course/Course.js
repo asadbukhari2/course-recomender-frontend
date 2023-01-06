@@ -36,7 +36,7 @@ function Course(props) {
 	function closeModal() {
 		setIsOpen(false);
 	}
-
+	console.log(props.fItem);
 	const toggleCartHandler = () => {
 		if (state.cart.items.length > 0) {
 			state.cart.items
@@ -78,7 +78,8 @@ function Course(props) {
 				isOpen={modalIsOpen}
 				onRequestClose={closeModal}
 				style={customStyles}
-				contentLabel="Example Modal">
+				contentLabel="Example Modal"
+				ariaHideApp={false}>
 				<div className={classes.Modal}>
 					<div className={classes.ModalImg}>
 						<img
@@ -104,22 +105,17 @@ function Course(props) {
 					</div>
 					<div className={classes.ModalDescriptionText}>
 						<h5 style={{ marginBottom: "10px" }}>Description:</h5>
-						<p style={{ marginBottom: "10px" }}>
-							is simply dummy text of the printing and typesetting industry.
-							Lorem Ipsum has been the industry's standard dummy text ever since
-							the 1500s, when an unknown printer took a galley of type and
-							scrambled it to make a type specimen book. It has survived not
-							only five centuries, but
-						</p>
+						<p style={{ marginBottom: "10px" }}>{props.fItem.description}</p>
 					</div>
 				</div>
 			</Modal>
 
-			<div className={classes.Container} onClick={openModal}>
+			<div className={classes.Container}>
 				<img
 					className={classes.Image}
 					src={props.fItem.photo}
 					alt={"Featured Item"}
+					onClick={openModal}
 				/>
 
 				<div className={classes.Middle}>
@@ -136,13 +132,13 @@ function Course(props) {
 					</div>
 				</div>
 
-				{/* <div className={classes.Rating}>
+				<div className={classes.Rating}>
 					<span>&#9733;</span>
 					<span>&#9733;</span>
 					<span>&#9733;</span>
 					<span>&#9733;</span>
 					<span>&#9734;</span>
-				</div> */}
+				</div>
 
 				<div className={classes.DetailView}>
 					<div className={classes.Title}>

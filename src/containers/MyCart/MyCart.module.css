@@ -197,9 +197,10 @@ h3 {
 
 .Image {
 	/*margin: 5px 10px;*/
-	width: 80px;
-	height: 80px;
-	object-fit: contain;
+	width: 150px;
+	height: 150px;
+	object-fit: cover;
+	border-radius: 20%;
 	/*width: 210px;*/
 	/*height: 320px;*/
 }
