@@ -2,20 +2,15 @@ import React, { useState, useEffect, useRef } from "react";
 
 import classes from "./SignIn.module.css";
 
-import { NavLink, useHistory } from "react-router-dom";
+import { NavLink, Redirect, useHistory } from "react-router-dom";
 
-import {
-	Login,
-	getCurrentUser,
-	FetchLogedInUser,
-} from "../../../services/authService";
+import { Login, getCurrentUser } from "../../../services/authService";
 import { InputChangeHandler, formElements } from "../../../shared/utility";
 import { useStore } from "../../../hooks-store/store";
 
 import Button from "../../../components/UI/Button/Button";
 import Input from "../../../components/UI/Input/Input";
 import Spinner from "../../../components/UI/Spinner/Spinner";
-import { SubmitOrder } from "../../../services/orderServices";
 
 // function SignIn(props) {
 const SignIn = React.memo(props => {
@@ -23,8 +18,7 @@ const SignIn = React.memo(props => {
 	// Local State Management Section
 	const [username, setUsername] = useState("");
 	const [password, setPassword] = useState("");
-	// eslint-disable-next-line no-unused-vars
-	const [loginAs, setLoginAs] = useState("customer");
+
 	const [loading, setLoading] = useState(false);
 	// eslint-disable-next-line no-unused-vars
 	const [message, setMessage] = useState("");
@@ -102,14 +96,6 @@ const SignIn = React.memo(props => {
 					if (response) {
 						dispatch("AUTH_START");
 
-						// FetchLogedInUser(getCurrentUser().decodeUser.user_id)
-						//     .then((response) => {
-						//         // dispatch('FETCH_USER', response)
-						//         console.log('fetched LoginIn user in App.js Is : ', response)
-						//         history.push('/')
-						//         window.location.reload()
-						//     })
-
 						console.log("before window.location.reload in SignIn.js");
 						history.push("/");
 						window.location.reload();
@@ -140,8 +126,6 @@ const SignIn = React.memo(props => {
 	let form = (
 		<form className={classes.SignInForm} onSubmit={loginHandler}>
 			{formElementsArray.map(formElement => (
-				// <Aux>
-				//     <label>{formElement.config.elementConfig.placeholder}</label>
 				<Input
 					key={formElement.id}
 					elementType={formElement.config.elementType}
@@ -153,7 +137,6 @@ const SignIn = React.memo(props => {
 					changed={event => inputChangedHandler(event, formElement.id)}
 					label={formElement.config.elementConfig.label}
 				/>
-				// </Aux>
 			))}
 			<div className={classes.SignInButtons}>
 				<div>

@@ -1,0 +1,68 @@
+.Contaner {
+	/* height: calc(100vh - 250px); */
+	padding: 20px;
+	height: auto;
+}
+.StudentDetail {
+	display: flex;
+	height: 300px;
+	border-bottom: 1px dashed grey;
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+}
+.Picture {
+	width: 30%;
+	margin-top: 10px;
+}
+.Picture img {
+	border: 1px solid black;
+	border-radius: 50%;
+	object-fit: cover;
+	width: 250px;
+}
+.Detail {
+	width: 70%;
+	margin-left: 10px;
+	padding: 20px;
+	display: flex;
+}
+.DetailLeft {
+	align-self: flex-start;
+	width: 50%;
+}
+.DetailRight {
+	align-self: flex-start;
+	width: 50%;
+}
+.Content {
+	font-size: 24px;
+	padding: 10px 0;
+}
+.Content h5 {
+	color: rgb(132, 129, 129);
+}
+.Content span {
+	font-size: 16px;
+	text-decoration: underline;
+}
+.Name {
+	font-size: 24px;
+	padding-bottom: 10px;
+}
+.Name h5 {
+	color: rgb(132, 129, 129);
+}
+.Name span {
+	font-size: 20px;
+	font-weight: bolder;
+}
+.EnrolledCourses {
+	min-height: 300px;
+	margin-bottom: 20px;
+}
+.Cards {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+}

@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 import classes from "./Courses.module.css";
-
 import { useStore } from "../../hooks-store/store";
-
 import Spinner from "../UI/Spinner/Spinner";
 import SideDrawerFilter from "../UI/Side Drawer Filter/SideDrawerFilter";
 import Course from "../UI/Course/Course";

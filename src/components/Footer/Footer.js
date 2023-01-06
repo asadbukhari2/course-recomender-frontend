@@ -12,7 +12,6 @@ import WhatsAppSVG from "../../hoc/SVGIcons/WhatsAppSVG";
 function Footer() {
 	return (
 		<footer>
-			{/*<div className={classes.FooterIcons}>*/}
 			<div className={[baseClasses.Row, classes.FooterIcons].join(" ")}>
 				<div className={classes.FooterLinks}>
 					<ul className={classes.FooterNav}>
@@ -90,7 +89,6 @@ function Footer() {
 						</li>
 					</ul>
 				</div>
-				{/*<div className={classes.Copy}>*/}
 				<div className={[baseClasses.Row, classes.Copy].join(" ")}>
 					<p>
 						Copyright &copy; 2021 by Course Recommender. All rights reserved.

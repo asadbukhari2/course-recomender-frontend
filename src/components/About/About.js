@@ -6,6 +6,7 @@ import baseClasses from "../../assets/css/base.module.css";
 function About(props) {
 	return (
 		<section
+			id="aboutSection"
 			className={[classes.About, baseClasses.BackgroundImgThree].join(" ")}>
 			<h2 className={classes.Title}>About</h2>
 			<div className={[classes.Description, baseClasses.Row].join(" ")}>

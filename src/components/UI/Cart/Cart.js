@@ -1,18 +1,30 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
-import classes from "./Cart.module.css";
-
-import { NavLink } from "react-router-dom";
+import { NavLink, Redirect, useHistory } from "react-router-dom";
 import { useStore } from "../../../hooks-store/store";
-
+import classes from "./Cart.module.css";
 import BagSVG from "../../../hoc/SVGIcons/BagSVG";
 import Button from "../Button/Button";
 import MyCart from "../../../containers/MyCart/MyCart";
+import { getCurrentUser } from "../../../services/authService";
 
-function Cart(props) {
+function Cart() {
 	const [view, setView] = useState(false);
+	const [isDropView, setIsDropView] = useState(false);
+	const navigate = useHistory();
 
 	const state = useStore()[0];
+	const dispatch = useStore()[1];
+
+	const currentUser = getCurrentUser();
+
+	useEffect(() => {
+		if (currentUser.token) {
+			setIsDropView(true);
+		} else {
+			setIsDropView(false);
+		}
+	}, [currentUser]);
 
 	const cartItems = state.cart.items;
 
@@ -33,39 +45,38 @@ function Cart(props) {
 		totalPrice = 0;
 	}
 
+	const oncheckout = () => {
+		navigate.push("/dashboard");
+	};
+
 	return (
 		<ul className={classes.NavIcons}>
 			<li>
 				<button className={classes.Cart} type={"submit"}>
-					<a href={"#"} title={""} onClick={event => event.preventDefault()}>
-						<div className={classes.SvgBag} onClick={toggleDetailViewHandler}>
-							<BagSVG
-								name={"bag"}
-								fill={"#bdc3c7"}
-								width={50}
-								className={classes.BagSVG}
-							/>
-							<div className={classes.SvgBagItems}>
-								{state.cart.items.length}
-							</div>
-						</div>
-					</a>
+					{/* <a href="#" title="button" onClick={event => event.preventDefault()}> */}
+					<div className={classes.SvgBag} onClick={toggleDetailViewHandler}>
+						<BagSVG
+							name={"bag"}
+							fill={"#bdc3c7"}
+							width={50}
+							className={classes.BagSVG}
+						/>
+						<div className={classes.SvgBagItems}>{state.cart.items.length}</div>
+					</div>
+					{/* </a> */}
 				</button>
+			</li>
+			{isDropView === true ? (
 				<div className={classes.DropDownCart}>
 					<div
-						// className={classes.DropDownCartDetail}>
 						className={
 							window.innerWidth >= 500
 								? classes.DropDownCartDetail
 								: classes.DropDownCartDetailV2
 						}>
-						{/*className={window.innerWidth >= 500 ? classes.DropDownCartDetail : view === true ? classes.DropDownCartDetailV2 : classes.NoneDisplay}>*/}
 						<div className={classes.DropDownCartDetailItems}>
-							{/*<OrderDetail styleFor={'hover'}/>*/}
 							<MyCart styleFor={"hover"} />
 						</div>
-						{/*<div className={state.auth.token || state.cart.items.length > 0 ? classes.DropDownButtons : classes.DropDownButton}>*/}
-						{/*<div className={state.auth.token || localStorage.getItem('cart').length > 2 ? classes.DropDownButtons : classes.DropDownButton}>*/}
 						<div
 							className={
 								state.cart.items.length > 0
@@ -73,31 +84,24 @@ function Cart(props) {
 									: classes.NoneDisplay
 							}>
 							<div>
-								<NavLink
-									// exact={props.exact}
-									to={"/cart"}>
+								<NavLink to={"/cart"}>
 									<Button>View Cart</Button>
 								</NavLink>
 							</div>
-							{/*{state.auth.token || state.cart.items.length > 0 ?*/}
 							{state.cart.items.length > 0 ? (
 								<div>
-									<NavLink
-										// exact={props.exact}
-										to={"/checkout"}>
-										<Button>Check Out</Button>
-									</NavLink>
+									<Button onclick={oncheckout}>Check Out</Button>
 								</div>
 							) : null}
 						</div>
 					</div>
 				</div>
-			</li>
+			) : (
+				""
+			)}
 			{window.innerWidth > 500 ? (
 				<li className={classes.Cart}>
-					<NavLink
-						// exact={props.exact}
-						to={"/cart"}>
+					<NavLink to={"/cart"}>
 						<div className={classes.CartDescription}>
 							<p className={classes.cart}>Cart</p>
 							<p className={classes.Text}>

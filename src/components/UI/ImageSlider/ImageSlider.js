@@ -8,7 +8,7 @@ import Aux from "../../../hoc/_Aux/_Aux";
 function ImageSlider(props) {
 	const [index, setIndex] = useState(0);
 
-	console.log("images in imageslider is : ", props);
+	// console.log("images in imageslider is : ", props);
 
 	let propsChildren = [];
 	if (props && props.children && props.children.length > 0) {

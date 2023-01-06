@@ -1,0 +1,57 @@
+.Container {
+	width: 260px;
+	height: 400px;
+	border-radius: 10px;
+	margin-left: 25px;
+	background-color: rgba(255, 255, 255, 0.7);
+	border: 0.5px solid black;
+	margin-top: 20px;
+}
+
+.Image {
+	padding: 10px;
+	width: 260px;
+	height: 220px;
+	opacity: 1;
+	display: block;
+	transition: 0.5s ease;
+	backface-visibility: hidden;
+	border-bottom: 0.5px dashed black;
+}
+
+.Container:hover .Image {
+	opacity: 0.3;
+}
+
+.Rating {
+	margin: 15px 0 0 10px;
+	color: #e67e22;
+}
+
+.DetailView {
+	height: 80px;
+	padding: 10px 5px 0px 10px;
+	font-weight: 900;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.Price {
+	font-size: 14px;
+	width: 50px;
+	word-wrap: break-word;
+}
+.Title {
+	font-size: 14px;
+	width: 190px;
+}
+/* .DetailViewButton {
+	width: 100px;
+	font-size: 50%;
+} */
+.ModalDescriptionText {
+	/* margin-top: 10px; */
+	padding: 0px 10px 0px 10px;
+	font-size: 18px;
+	color: rgb(84, 83, 83);
+}

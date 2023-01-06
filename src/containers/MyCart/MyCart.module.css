@@ -198,14 +198,16 @@ h3 {
 .Image {
 	/*margin: 5px 10px;*/
 	width: 80px;
-	height: 113px;
+	height: 80px;
+	object-fit: contain;
 	/*width: 210px;*/
 	/*height: 320px;*/
 }
 
 .HoverImage {
-	width: 50px;
-	height: 70px;
+	width: 30px;
+	height: 30px;
+	object-fit: contain;
 }
 
 .Description {

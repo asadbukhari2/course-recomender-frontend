@@ -9,7 +9,6 @@ function ParseJwt(token) {
 			})
 			.join("")
 	);
-
 	return JSON.parse(jsonPayload);
 }
 

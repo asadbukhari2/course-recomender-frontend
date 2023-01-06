@@ -33,7 +33,9 @@ function Button(props) {
 		);
 	} else {
 		showButton = (
-			<button className={[classes.Button, classes[props.btnType]].join(" ")}>
+			<button
+				className={[classes.Button, classes[props.btnType]].join(" ")}
+				onClick={props.onclick}>
 				{props.children}
 			</button>
 		);

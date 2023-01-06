@@ -12,11 +12,15 @@ import MainView from "./containers/MainView/MainView";
 import Logout from "./containers/Auth/Logout/Logout";
 import SignUp from "./containers/Auth/SignUp/SignUp";
 import SignIn from "./containers/Auth/SignIn/SignIn";
-import { fetchCourses } from "./services/courseSerivces";
 import Spinner from "./components/UI/Spinner/Spinner";
+import ProtectedRoute from "./components/UI/ProtectedRoute/ProtectedRoute";
+// import Dashboard from "./components/Dashboard/Dashboard";
 
 const Courses = React.lazy(() => {
 	return import("./components/Courses/Courses");
+});
+const Dashboard = React.lazy(() => {
+	return import("./components/Dashboard/Dashboard");
 });
 
 const DegreeSemester = React.lazy(() => {
@@ -28,22 +32,15 @@ const MyCart = React.lazy(() => {
 });
 
 function App(props) {
-	/*----State Section----*/
-	// Local State
 	const [isAuthenticated, setIsAuthenticated] = useState(false);
 
-	// Global State
 	const dispatch = useStore(true)[1];
 	const state = useStore()[0];
 
 	const _Mounted = useRef(true);
 
-	/*----Effects Section----*/
-
 	useEffect(() => {
 		if (_Mounted.current === true) {
-			console.log("state after fetching courses is : ", state);
-
 			if (localStorage.getItem("user")) {
 				VerifyUser().then(response => {
 					if (_Mounted.current) {
@@ -51,8 +48,7 @@ function App(props) {
 							setIsAuthenticated(response);
 							dispatch("AUTH_SUCCESS", getCurrentUser().token);
 
-							FetchCart().then(response => {
-								// console.log('Fetching cart')
+							FetchCart().then(() => {
 								let newUpdatedCart = [];
 
 								if (localStorage.getItem("cart")) {
@@ -74,7 +70,7 @@ function App(props) {
 				});
 			} else if (localStorage.getItem("cart")) {
 				const oldCart = JSON.parse(localStorage.getItem("cart"));
-				dispatch("FETCH_CART", oldCart);
+				dispatch("FETCH_CART", []);
 				setIsAuthenticated(false);
 			} else {
 				setIsAuthenticated(false);
@@ -88,37 +84,26 @@ function App(props) {
 
 	let routes = (
 		<Switch>
-			{/*<Route path={'/auth'} render={(props) => <Auth {...props}/>}/>*/}
-			{/*<Route path={'/checkout'} render={(props) => <Checkout {...props}/>}/>*/}
-			{/*<Route path={'/product_detail'} render={(props) => <DetailView {...props}/>}/>*/}
-			{/* <Route path={"/courses"} render={props => <Courses {...props} />} />
-			<Route
-				path={"/degree_semester"}
-				render={props => <DegreeSemester {...props} />}
-			/> */}
-			<Route path={"/cart"} render={props => <MyCart {...props} />} />
 			<Route path={"/auth"} render={props => <SignIn />} />
 			<Route path={"/sign_up"} render={props => <SignUp />} />
 			<Route path={"/"} exact component={MainView} />
-			<Redirect to={"/"} />
+			{/* <Redirect to={"/"} /> */}
 		</Switch>
 	);
 
 	if (isAuthenticated) {
 		routes = (
 			<Switch>
+				<Route path={"/"} exact component={MainView} />
 				<Route path={"/courses"} render={props => <Courses {...props} />} />
 				<Route
 					path={"/degree_semester"}
 					render={props => <DegreeSemester {...props} />}
 				/>
-				<Route path={"/products"} render={props => <Courses {...props} />} />
-				{/*<Route path={'/checkout'} render={(props) => <Checkout {...props}/>}/>*/}
 				<Route path={"/cart"} render={props => <MyCart {...props} />} />
-				{/*<Route path={'/product_detail'} render={(props) => <DetailView {...props}/>}/>*/}
 				<Route path={"/logout"} component={Logout} />
-				<Route path={"/"} exact component={MainView} />
-				<Redirect to={"/"} />
+				<Route path={"/dashboard"} exact component={Dashboard} />
+				{/* <Redirect to={"/"} /> */}
 			</Switch>
 		);
 	}
@@ -127,7 +112,6 @@ function App(props) {
 		<div>
 			<Layout isAuthenticated={isAuthenticated}>
 				{console.log("global State in app.js", state)}
-				{/*<Suspense fallback={<p>Loading</p>}>*/}
 				<Suspense fallback={<Spinner />}>{routes}</Suspense>
 			</Layout>
 		</div>
