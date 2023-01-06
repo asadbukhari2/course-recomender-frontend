@@ -52,8 +52,6 @@ export const InputChangeHandler = (event, inputIdentifier, formType) => {
 			event.target.value,
 			formType[inputIdentifier].validation
 		),
-		// valid: checkValidity(event.target.value, formType[inputIdentifier].validation).isValid,
-		// error: checkValidity(event.target.value, formType[inputIdentifier].validation).error,
 		touched: true,
 	});
 

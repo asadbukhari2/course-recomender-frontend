@@ -10,7 +10,7 @@ function Card(props) {
 				<h4>
 					<b>{props.cName}</b>
 				</h4>
-				<p>{props.cSlogan}</p>
+				<p style={{ width: "100%" }}>{props.cSlogan}</p>
 			</div>
 		</div>
 	);

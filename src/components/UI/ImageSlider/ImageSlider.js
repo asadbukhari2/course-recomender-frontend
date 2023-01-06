@@ -15,11 +15,6 @@ function ImageSlider(props) {
 		propsChildren = props.children;
 	}
 
-	let productToView = propsChildren.slice(index, index + 1).map(child => {
-		propsChildren.push(child);
-		return child;
-	});
-
 	const slideLeft = () => {
 		setIndex((index + 1) % props.images.length);
 	};
@@ -43,19 +38,14 @@ function ImageSlider(props) {
 						baseClasses.BackgroundImgOne,
 					].join(" ")}>
 					<div className={classes.Fade}>
-						{/* <div className={classes.NumberText}>
-							{index + 1}/{props.images.length}
-						</div> */}
 						<img
 							src={props.images[index]}
 							alt={index}
 							style={{
-								objectCover: "cover",
-								width: "",
+								objectFit: "cover",
+								objectPosition: "30% 30%",
 							}}
 						/>
-						{/*{productToView}*/}
-						{/* <div className={classes.Text}>image {index + 1}</div> */}
 					</div>
 					<button
 						className={[classes.Prev, classes.Fade].join(" ")}
@@ -74,20 +64,9 @@ function ImageSlider(props) {
 						&#10095;
 					</a>
 				</div>
-
-				{/*<br/>*/}
-
-				{/*<div style={{textAlign: "center"}}>*/}
-				{/*    <span className={classes.Dot} onClick={() => setIndex(0)}/>*/}
-				{/*    <span className={classes.Dot} onClick={() => setIndex(1)}/>*/}
-				{/*    <span className={classes.Dot} onClick={() => setIndex(2)}/>*/}
-				{/*    <span className={classes.Dot} onClick={() => setIndex(3)}/>*/}
-				{/*</div>*/}
 			</Aux>
 		);
 	}
-
-	// setTimeout(slideLeft, 3000)
 
 	return (
 		props.images.length > 0 && (

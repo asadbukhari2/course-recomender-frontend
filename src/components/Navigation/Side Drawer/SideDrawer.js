@@ -6,7 +6,6 @@ import Logo from "../../UI/Logo/Logo";
 import Backdrop from "../../UI/BackDrop/Backdrop";
 import Aux from "../../../hoc/_Aux/_Aux";
 import NavigationItems from "../NavigationItems/NavigationItems";
-// import SearchBar from "../../SearchBar/SearchBar";
 
 function SideDrawer(props) {
 	let attachedClasses = [classes.SideDrawer, classes.Close];
@@ -22,10 +21,7 @@ function SideDrawer(props) {
 					<Logo />
 				</div>
 
-				<div onClick={props.opened} className={classes.SearchBar}>
-					{/*<div className={classes.SearchBar}>*/}
-					{/*    <SearchBar/>*/}
-				</div>
+				{/* <div onClick={props.opened} className={classes.SearchBar}></div> */}
 
 				<nav>
 					<NavigationItems isAuthenticated={props.isAuth} />

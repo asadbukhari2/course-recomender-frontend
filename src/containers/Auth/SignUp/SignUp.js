@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useRef, useState } from "react";
 
 import classes from "./SignUp.module.css";
@@ -5,14 +7,12 @@ import classes from "./SignUp.module.css";
 import { NavLink, useHistory } from "react-router-dom";
 import { formElements, InputChangeHandler } from "../../../shared/utility";
 import { Register } from "../../../services/authService";
-import { getCurrentUser } from "../../../services/authService";
 
 import Button from "../../../components/UI/Button/Button";
 import Input from "../../../components/UI/Input/Input";
 import Spinner from "../../../components/UI/Spinner/Spinner";
 
 import { useStore } from "../../../hooks-store/store";
-import { SubmitOrder } from "../../../services/orderServices";
 
 function SignUp(props) {
 	const [firstName, setFirstName] = useState("");
@@ -134,7 +134,6 @@ function SignUp(props) {
 		},
 	});
 
-	const state = useStore()[0];
 	const dispatch = useStore()[1];
 
 	const history = useHistory();
