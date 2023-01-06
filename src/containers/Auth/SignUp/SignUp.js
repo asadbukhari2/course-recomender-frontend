@@ -100,7 +100,6 @@ function SignUp(props) {
 			valid: false,
 			touched: false,
 		},
-		// is_active: true,
 		contact_no: {
 			elementType: "input",
 			elementConfig: {
@@ -165,10 +164,6 @@ function SignUp(props) {
 		Register(user, contact, city)
 			.then(response => {
 				if (_Mounted.current) {
-					console.log("Response on Registration : ", response);
-
-					// const token = getCurrentUser().token
-					// const user = getCurrentUser().decodeUser
 					dispatch("AUTH_START");
 				}
 				history.push("/");
@@ -203,8 +198,6 @@ function SignUp(props) {
 	let form = (
 		<form className={classes.SignUpForm} onSubmit={signUpHandler}>
 			{formElementsArray.map(formElement => (
-				// <Aux>
-				//     <label>{formElement.config.elementConfig.placeholder}</label>
 				<Input
 					key={formElement.id}
 					elementType={formElement.config.elementType}
@@ -216,21 +209,10 @@ function SignUp(props) {
 					changed={event => inputChangedHandler(event, formElement.id)}
 					label={formElement.config.elementConfig.label}
 				/>
-				// </Aux>
 			))}
 			<div className={classes.SignUpButtons}>
-				{/*<div onClick={toggleOrderHandler}>*/}
 				<div>
-					{/*{console.log('user token and id : ', currentUser.decodeUser, ' now ...', currentUser.token)}*/}
-					<Button
-						btnType={"ButtonGhost"}
-						// dispatchAction={'AUTH_START'}
-						// dispatchValue={currentUser.token}
-						// dispatchValueSecond={currentUser.decodeUser}
-					>
-						Sign Up
-					</Button>
-					{/*{console.log('none of now global state is : ', state)}*/}
+					<Button btnType={"ButtonGhost"}>Sign Up</Button>
 				</div>
 				<div>
 					<NavLink exact={props.exact} to={"/auth"}>

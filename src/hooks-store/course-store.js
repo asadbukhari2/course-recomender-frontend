@@ -5,8 +5,6 @@ const configureCoursesStore = () => {
 		FETCH_COURSES: (currState, courses) => {
 			currState.course.courses = courses;
 
-			// localStorage.setItem("courses", JSON.stringify(courses));
-
 			return currState;
 		},
 
@@ -36,8 +34,6 @@ const configureCoursesStore = () => {
 					filterCourses.degree === currState.course.degree &&
 					filterCourses.semester === currState.course.semester
 			);
-
-			// console.log("after filtered courses is : ", currState);
 
 			return currState;
 		},

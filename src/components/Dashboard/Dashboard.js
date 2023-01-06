@@ -21,7 +21,7 @@ const Dashboard = () => {
 			const user = users.filter(
 				ele => currentLoggedInuser.user_id === ele.user.id
 			)[0];
-			console.log(user);
+			console.log(user, "user");
 			setUserDetails({
 				userName: user.user.first_name + " " + user.user.last_name,
 				userEmail: user.user.email,
@@ -36,7 +36,7 @@ const Dashboard = () => {
 					(user.state !== null ? user.state : " ") +
 					" ," +
 					(user.country !== null ? user.country : ""),
-				userImage: user.avatar === null ? img1 : user.avatar,
+				userImage: user.avatar !== null ? user.avatar : img1,
 			});
 		};
 		get();

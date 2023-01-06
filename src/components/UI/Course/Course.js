@@ -1,5 +1,4 @@
 import React from "react";
-import ReactStars from "react-rating-stars-component";
 import Modal from "react-modal";
 
 import classes from "./Course.module.css";
@@ -20,8 +19,6 @@ const customStyles = {
 		transform: "translate(-50%, -50%)",
 	},
 };
-
-// Make sure to bind modal to your appElement (https://reactcommunity.org/react-modal/accessibility/)
 
 function Course(props) {
 	const dispatch = useStore()[1];
@@ -82,11 +79,7 @@ function Course(props) {
 				ariaHideApp={false}>
 				<div className={classes.Modal}>
 					<div className={classes.ModalImg}>
-						<img
-							// className={classes.Image}
-							src={props.fItem.photo}
-							alt={"Featured Item"}
-						/>
+						<img src={props.fItem.photo} alt={"Featured Item"} />
 					</div>
 					<div className={classes.ModalDescription}>
 						<div className={classes.ModalTitle}>
@@ -144,12 +137,6 @@ function Course(props) {
 					<div className={classes.Title}>
 						<span>{props.fItem.name}</span>
 					</div>
-					{/* <div className={classes.Price}>
-						<span>
-							Rs:
-							{Math.floor(props.fItem.price)}
-						</span>
-					</div> */}
 				</div>
 			</div>
 		</Aux>

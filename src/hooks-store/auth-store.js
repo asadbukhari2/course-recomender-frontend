@@ -55,7 +55,6 @@ const configureAuthStore = () => {
 			userId: null,
 			error: null,
 			loading: false,
-			// authRedirectPath: "/",
 		},
 	});
 };

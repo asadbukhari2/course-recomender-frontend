@@ -4,7 +4,7 @@ import classes from "./MyCart.module.css";
 import { useStore } from "../../hooks-store/store";
 import Spinner from "../../components/UI/Spinner/Spinner";
 import Button from "../../components/UI/Button/Button";
-import { NavLink, Redirect, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 function MyCart(props) {
 	const [update, setUpdate] = useState(false);

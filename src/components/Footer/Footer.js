@@ -91,7 +91,7 @@ function Footer() {
 				</div>
 				<div className={[baseClasses.Row, classes.Copy].join(" ")}>
 					<p>
-						Copyright &copy; 2021 by Course Recommender. All rights reserved.
+						Copyright &copy; 2023 by Course Recommender. All rights reserved.
 					</p>
 				</div>
 			</div>

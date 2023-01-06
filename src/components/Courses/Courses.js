@@ -33,7 +33,6 @@ function Courses() {
 		coursesToRender = <Spinner />;
 	} else {
 		if (state.course.category !== null || state.course.difficulty !== null) {
-			console.log("coursesToRender filterCategoryOrDifficulty");
 			if (state.course.filterCategoryOrDifficulty.length > 0) {
 				coursesToRender = state.course.filterCategoryOrDifficulty.map(fItem => (
 					<div key={fItem.id}>
@@ -48,7 +47,6 @@ function Courses() {
 			state.course.degree !== null &&
 			state.course.semester !== null
 		) {
-			console.log("coursesToRender filterItem");
 			coursesToRender = state.course.filterItem.map(fItem => (
 				<div key={fItem.id}>
 					<Course fItem={fItem} />

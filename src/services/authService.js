@@ -3,8 +3,6 @@ import Axios from "../axios-request";
 import ParseJwt from "../shared/JwtParser";
 import { authHeader } from "./authHeader";
 
-// import {useStore} from "../hooks-store/store";
-
 export const Register = async (user, contact_no, city_name) => {
 	return Axios.post("student", { user, contact_no, city_name }).then(
 		response => {

@@ -12,7 +12,6 @@ import Button from "../../../components/UI/Button/Button";
 import Input from "../../../components/UI/Input/Input";
 import Spinner from "../../../components/UI/Spinner/Spinner";
 
-// function SignIn(props) {
 const SignIn = React.memo(props => {
 	/*----State Section----*/
 	// Local State Management Section
@@ -61,8 +60,6 @@ const SignIn = React.memo(props => {
 
 	const state = useStore()[0];
 	const dispatch = useStore()[1];
-
-	// Current User
 	const currentUser = getCurrentUser();
 
 	const _Mounted = useRef(true);
@@ -72,16 +69,12 @@ const SignIn = React.memo(props => {
 		return () => {
 			if (_Order.current) {
 				dispatch("EMPTY_CART");
-				// dispatch('SUBMIT_ORDER_END')
 			}
 			_Mounted.current = false;
 		};
 	}, []);
 
-	// Routing History
 	const history = useHistory();
-
-	/*----Logical Section----*/
 
 	const loginHandler = e => {
 		e.preventDefault();
@@ -89,7 +82,6 @@ const SignIn = React.memo(props => {
 		setUsername(loginForm.email.value);
 		setPassword(loginForm.password.value);
 
-		// Login(loginForm.email.value, loginForm.password.value, 'customer')
 		Login(loginForm.email.value, loginForm.password.value)
 			.then(response => {
 				if (_Mounted.current) {
@@ -148,9 +140,7 @@ const SignIn = React.memo(props => {
 					</Button>
 				</div>
 				<div>
-					<NavLink
-						// exact={props.exact}
-						to={"/sign_up"}>
+					<NavLink to={"/sign_up"}>
 						<Button btnType={"ButtonGhost"}>Sign Up</Button>
 					</NavLink>
 				</div>
