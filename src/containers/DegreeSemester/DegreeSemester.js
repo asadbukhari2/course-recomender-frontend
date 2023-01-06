@@ -22,36 +22,16 @@ function DegreeSemester(props) {
 
 	let coursesToRender = null;
 
-	// if (state.auth.loading) {
-	//     coursesToRender = <Spinner/>
-	// } else {
-	//     console.log('before accessing courses global state is : ', state)
-	//     if (state.course.degree !== null && state.course.semester !== null) {
-	//         coursesToRender = state.course.courses.filter(
-	//             filterDegreeCourses => filterDegreeCourses.degree === state.course.degree).filter(
-	//             filterSemesterCourses => filterSemesterCourses.degree === state.course.semester).map(
-	//             fItem =>
-	//                 <div key={fItem.id}>
-	//                     <Course fItem={fItem}/>
-	//                 </div>
-	//         )
-	//         // }else if(state.course.searchedProducts.length > 0){
-	//         //     coursesToRender = state.course.searchedProducts.map(fItem =>
-	//         //         <div key={fItem.id}>
-	//         //             <Course fItem={fItem}/>
-	//         //         </div>
-	//         //     )
-	//     } else {
-	//         coursesToRender = <div> No Courses !</div>
-	//     }
-	// }
+	// useEffect(() => {
+	// 	fetchCourses().then(courses => {
+	// 		// console.log("response after hitting courses endpoint : ", courses);
+	// 		const localCourse = JSON.parse(localStorage.getItem("courses"));
 
-	useEffect(() => {
-		fetchCourses().then(courses => {
-			console.log("response after hitting courses endpoint : ", courses);
-			dispatch("FETCH_COURSES", courses);
-		});
-	}, []);
+	// 		console.log(courses);
+	// 		// const single = [...localCourse, ...courses];
+	// 		dispatch("FETCH_COURSES", courses);
+	// 	});
+	// }, []);
 
 	const toggleDegreeSemesterHandler = () => {
 		const data = {

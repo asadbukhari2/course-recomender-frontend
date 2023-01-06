@@ -5,6 +5,8 @@ const configureCoursesStore = () => {
 		FETCH_COURSES: (currState, courses) => {
 			currState.course.courses = courses;
 
+			// localStorage.setItem("courses", JSON.stringify(courses));
+
 			return currState;
 		},
 

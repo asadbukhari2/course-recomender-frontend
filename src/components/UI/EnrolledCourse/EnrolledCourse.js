@@ -6,6 +6,8 @@ import { useStore } from "../../../hooks-store/store";
 import BagSVG from "../../../hoc/SVGIcons/BagSVG";
 import image from "../../../assets/images/a3.jpg";
 import Aux from "../../../hoc/_Aux/_Aux";
+import Button from "../Button/Button";
+import { Redirect } from "react-router-dom";
 
 const customStyles = {
 	content: {
@@ -24,6 +26,7 @@ function EnrolledCourse(props) {
 	const state = useStore()[0];
 
 	const { course } = props;
+	console.log(course, "fghdfiughdfghiuf");
 	const string =
 		"is simply dummy text of the printing and typesetting industry. LoremIpsum";
 	const [modalIsOpen, setIsOpen] = React.useState(false);
@@ -96,6 +99,13 @@ function EnrolledCourse(props) {
 						{string.substring(0, 50)}...
 					</p>
 				</div>
+				{course.study_mode === 2 && (
+					<div className={classes.LinkBtn}>
+						<a href="https://www.youtube.com" target="_blank" rel="noreferrer">
+							goto course
+						</a>
+					</div>
+				)}
 			</div>
 		</Aux>
 	);

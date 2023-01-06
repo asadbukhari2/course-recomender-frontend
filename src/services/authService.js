@@ -72,6 +72,7 @@ export const FetchLogedInUser = async userId => {
 export const LogoutService = () => {
 	localStorage.removeItem("user");
 	localStorage.removeItem("cart");
+	localStorage.removeItem("courses");
 	window.location.reload();
 };
 

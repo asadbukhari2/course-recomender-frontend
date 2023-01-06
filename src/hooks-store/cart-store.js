@@ -58,10 +58,9 @@ const configureCartStore = () => {
 		},
 
 		EMPTY_CART: currState => {
+			console.log("EMPTY_ART");
 			currState.cart.items = [];
-
 			localStorage.removeItem("cart");
-
 			return currState;
 		},
 	};

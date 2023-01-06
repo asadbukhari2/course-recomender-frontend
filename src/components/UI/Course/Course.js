@@ -72,8 +72,6 @@ function Course(props) {
 		}
 	};
 
-	console.log("pops in course component before return : ", props);
-
 	return (
 		<Aux>
 			<Modal

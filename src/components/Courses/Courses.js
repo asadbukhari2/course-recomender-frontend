@@ -27,7 +27,7 @@ function Courses() {
 	const sideDrawerToggleHandler = () => {
 		setSideDrawerIsVisible(!sideDrawerIsVisible);
 	};
-	console.log("state in courses", state);
+
 	let coursesToRender = null;
 	if (state.auth.loading) {
 		coursesToRender = <Spinner />;

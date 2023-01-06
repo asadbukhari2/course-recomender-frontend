@@ -8,6 +8,7 @@ import { NavLink, Redirect, useHistory } from "react-router-dom";
 
 function MyCart(props) {
 	const [update, setUpdate] = useState(false);
+	const history = useHistory();
 
 	const dispatch = useStore()[1];
 	const state = useStore()[0];
@@ -51,7 +52,6 @@ function MyCart(props) {
 			localStorage.removeItem("cart");
 		}
 	};
-	const history = useHistory();
 	const onCheckOut = () => {
 		dispatch("EMPTY_CART");
 		history.push("/");

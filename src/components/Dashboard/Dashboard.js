@@ -5,15 +5,12 @@ import img1 from "../../assets/images/a3.jpg";
 import EnrolledCourse from "../UI/EnrolledCourse/EnrolledCourse";
 
 import classes from "./Dashboard.module.css";
-import { getCurrentUser } from "../../services/authService";
 const Dashboard = () => {
 	const state = useStore()[0];
-	const dispatch = useStore()[1];
-
-	// const user = getCurrentUser();
 
 	const user = state.auth.user;
-	console.log({ user }, "this is a state");
+	const courses = state.cart.items;
+	console.log({ user }, state.cart, "this is a state");
 
 	const userImage = img1;
 	const userName = "Asad Bukhari";
@@ -22,7 +19,8 @@ const Dashboard = () => {
 	const userStreetAddress = "qainchi main bazar";
 	const userCity = "Lahore";
 
-	const courses = state.cart.items || [];
+	// const courses = state.cart.items;
+	console.log(courses, "ooomg");
 
 	return (
 		<>

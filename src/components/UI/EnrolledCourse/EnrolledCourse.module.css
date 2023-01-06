@@ -20,7 +20,7 @@
 }
 
 .Container:hover .Image {
-	opacity: 0.3;
+	border-radius: 20px;
 }
 
 .Rating {
@@ -54,4 +54,25 @@
 	padding: 0px 10px 0px 10px;
 	font-size: 18px;
 	color: rgb(84, 83, 83);
+}
+
+.LinkBtn {
+	/* width: 50%; */
+	padding: 10px 10px 0 0;
+	height: 30px;
+	display: flex;
+	align-items: flex-end;
+	justify-content: flex-end;
+	text-align: center;
+}
+.LinkBtn a {
+	/* background: none;
+	border: none;
+	outline: none; */
+	text-decoration: underline;
+	cursor: pointer;
+	font-style: italic;
+	font-weight: 500;
+	font-size: 14px;
+	color: rgb(96, 139, 214);
 }
