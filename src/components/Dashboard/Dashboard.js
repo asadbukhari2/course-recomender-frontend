@@ -13,11 +13,14 @@ const Dashboard = () => {
 
 	const currentLoggedInuser = state.auth.user;
 
+	console.log(currentLoggedInuser);
 	const courses = state.cart.items;
+
+	const id = currentLoggedInuser.user_id;
 
 	useEffect(() => {
 		const get = async () => {
-			const users = await FetchLogedInUser(9);
+			const users = await FetchLogedInUser(id);
 			const user = users.filter(
 				ele => currentLoggedInuser.user_id === ele.user.id
 			)[0];
