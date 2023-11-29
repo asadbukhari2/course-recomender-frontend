@@ -14,14 +14,12 @@ configureCoursesStore();
 configureCartStore();
 
 const app = (
-	<BrowserRouter>
-		<App />
-	</BrowserRouter>
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>
 );
 
 ReactDOM.render(
-	<React.StrictMode>{app}</React.StrictMode>,
-	document.getElementById("root")
+  <React.StrictMode>{app}</React.StrictMode>,
+  document.getElementById("root"),
 );
-
-//

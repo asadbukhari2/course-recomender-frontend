@@ -10,71 +10,73 @@ import Button from "../../components/UI/Button/Button";
 import { fetchCourses } from "../../services/courseSerivces";
 
 function DegreeSemester(props) {
-	const [degree, setDegree] = useState("1");
-	const [semester, setSemester] = useState("1");
+  const [degree, setDegree] = useState("1");
+  const [semester, setSemester] = useState("1");
 
-	const dispatch = useStore()[1];
+  const dispatch = useStore()[1];
 
-	useEffect(() => {
-		fetchCourses().then(courses => {
-			dispatch("FETCH_COURSES", courses);
-		});
-	}, []);
+  useEffect(() => {
+    fetchCourses().then((courses) => {
+      dispatch("FETCH_COURSES", courses);
+    });
+  }, []);
 
-	const toggleDegreeSemesterHandler = () => {
-		const data = {
-			degree: parseInt(degree),
-			semester: parseInt(semester),
-		};
-		dispatch("TOGGLE_DEGREE_SEMESTER", data);
-	};
+  const toggleDegreeSemesterHandler = () => {
+    const data = {
+      degree: parseInt(degree),
+      semester: parseInt(semester),
+    };
+    dispatch("TOGGLE_DEGREE_SEMESTER", data);
+  };
 
-	return (
-		<section
-			className={[classes.DegreeSemester, baseClasses.BackgroundImgTwo].join(
-				" "
-			)}>
-			<h2 className={classes.Title}>Degree and Semester</h2>
-			<div className={classes.Controller}>
-				<div className={classes.Select}>
-					<h3 className={classes.DSTitle}>Degree</h3>
-					<select onChange={e => setDegree(e.currentTarget.value)}>
-						<option value={"1"}>
-							Bachelors of Science in Computer Science
-						</option>
-						<option value={"2"}>
-							Bachelors of Science in Software Engineering
-						</option>
-						<option value={"3"}>
-							Bachelors of Science in Computer Engineering
-						</option>
-					</select>
-				</div>
+  return (
+    <section
+      className={[classes.DegreeSemester, baseClasses.BackgroundImgTwo].join(
+        " ",
+      )}
+    >
+      <h2 className={classes.Title}>Degree and Semester</h2>
+      <div className={classes.Controller}>
+        <div className={classes.Select}>
+          <h3 className={classes.DSTitle}>Degree</h3>
+          <select onChange={(e) => setDegree(e.currentTarget.value)}>
+            <option value={"1"}>
+              Bachelors of Science in Computer Science
+            </option>
+            <option value={"2"}>
+              Bachelors of Science in Software Engineering
+            </option>
+            <option value={"3"}>
+              Bachelors of Science in Computer Engineering
+            </option>
+          </select>
+        </div>
 
-				<div className={classes.Select}>
-					<h3 className={classes.DSTitle}>Semester</h3>
-					<select onChange={e => setSemester(e.currentTarget.value)}>
-						<option value={"1"}>1</option>
-						<option value={"2"}>2</option>
-						<option value={"3"}>3</option>
-						<option value={"4"}>4</option>
-						<option value={"5"}>5</option>
-						<option value={"6"}>6</option>
-						<option value={"7"}>7</option>
-						<option value={"8"}>8</option>
-					</select>
-				</div>
-			</div>
+        <div className={classes.Select}>
+          <h3 className={classes.DSTitle}>Semester</h3>
+          <select onChange={(e) => setSemester(e.currentTarget.value)}>
+            <option value={"1"}>1</option>
+            <option value={"2"}>2</option>
+            <option value={"3"}>3</option>
+            <option value={"4"}>4</option>
+            <option value={"5"}>5</option>
+            <option value={"6"}>6</option>
+            <option value={"7"}>7</option>
+            <option value={"8"}>8</option>
+          </select>
+        </div>
+      </div>
 
-			<div
-				className={classes.SubmitButton}
-				onClick={toggleDegreeSemesterHandler}>
-				<NavLink to={"courses"}>
-					<Button>Filter</Button>
-				</NavLink>
-			</div>
-		</section>
-	);
+      <div
+        className={classes.SubmitButton}
+        onClick={toggleDegreeSemesterHandler}
+      >
+        <NavLink to={"courses"}>
+          <Button>Filter</Button>
+        </NavLink>
+      </div>
+    </section>
+  );
 }
 
 export default DegreeSemester;

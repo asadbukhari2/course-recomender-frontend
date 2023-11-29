@@ -1,229 +1,229 @@
 .Container {
-	position: relative;
-	width: 360px;
-	min-height: 400px;
-	/* margin-left: 25px; */
-	margin: 20px;
-	padding: 10px;
-	background-color: rgba(255, 255, 255, 0.7);
-	/* border: 0.5px dashed black; */
-	border-radius: 10px;
+  position: relative;
+  width: 360px;
+  min-height: 400px;
+  /* margin-left: 25px; */
+  margin: 20px;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.7);
+  /* border: 0.5px dashed black; */
+  border-radius: 10px;
 }
 
 .Title {
-	font-size: 18px;
+  font-size: 18px;
 }
 
 .Image {
-	width: 340px;
-	height: 300px;
-	/*width: 150px;*/
-	/*height: 211px;*/
-	opacity: 1;
-	display: block;
-	/*width: 100%;*/
-	/*height: auto;*/
-	transition: 0.5s ease;
-	backface-visibility: hidden;
-	border-radius: 10px;
+  width: 340px;
+  height: 300px;
+  /*width: 150px;*/
+  /*height: 211px;*/
+  opacity: 1;
+  display: block;
+  /*width: 100%;*/
+  /*height: auto;*/
+  transition: 0.5s ease;
+  backface-visibility: hidden;
+  border-radius: 10px;
 }
 
 .WishListImage {
-	width: 100%;
-	height: 211px;
-	opacity: 1;
-	/*display: block;*/
-	transition: 0.5s ease;
-	backface-visibility: hidden;
+  width: 100%;
+  height: 211px;
+  opacity: 1;
+  /*display: block;*/
+  transition: 0.5s ease;
+  backface-visibility: hidden;
 }
 
 .Middle {
-	background-color: rgba(255, 255, 255, 1);
-	/* width: 100%; */
-	height: 50px;
-	transition: 0.5s ease;
-	opacity: 0;
-	/*opacity: 1;*/
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
-	position: absolute;
-	top: 70%;
-	right: 10px;
-	text-align: center;
-	border-radius: 50px;
+  background-color: rgba(255, 255, 255, 1);
+  /* width: 100%; */
+  height: 50px;
+  transition: 0.5s ease;
+  opacity: 0;
+  /*opacity: 1;*/
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  top: 70%;
+  right: 10px;
+  text-align: center;
+  border-radius: 50px;
 }
 
 .Container:hover .WishListImage,
 .Container:hover .Image {
-	opacity: 0.3;
+  opacity: 0.3;
 }
 
 .Container:hover .Middle {
-	opacity: 1;
+  opacity: 1;
 }
 .Container:hover {
-	box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
 }
 
 .Rating {
-	margin: 15px 0 0 10px;
-	color: #e67e22;
+  margin: 15px 0 0 10px;
+  color: #e67e22;
 }
 
 .Price {
-	margin: 5px 0 0 10px;
-	font-size: 18px;
+  margin: 5px 0 0 10px;
+  font-size: 18px;
 }
 
 .DetailWishListView {
-	height: 90px;
-	display: flex;
-	justify-content: space-between;
-	flex-flow: column;
-	/*background-color: #e67e22;*/
+  height: 90px;
+  display: flex;
+  justify-content: space-between;
+  flex-flow: column;
+  /*background-color: #e67e22;*/
 }
 
 .DetailWishListView .DetailViewButton {
-	width: 120px;
-	font-size: 50%;
+  width: 120px;
+  font-size: 50%;
 }
 
 .DetailView {
-	margin-top: 10px;
-	font-weight: 900;
-	display: flex;
-	justify-content: space-between;
-	/*background-color: #2ecc71;*/
+  margin-top: 10px;
+  font-weight: 900;
+  display: flex;
+  justify-content: space-between;
+  /*background-color: #2ecc71;*/
 }
 
 .DetailViewButton {
-	width: 100px;
-	font-size: 50%;
-	/*background-color: #e67e22;*/
+  width: 100px;
+  font-size: 50%;
+  /*background-color: #e67e22;*/
 }
 
 .HeartSVG path,
 .BagSVG path {
-	transition: 250ms;
+  transition: 250ms;
 }
 
 .BagSVGNotAllowed path {
-	cursor: not-allowed;
+  cursor: not-allowed;
 }
 
 .BagSVG:hover path {
-	fill: #fdfdfe;
+  fill: #fdfdfe;
 }
 
 .HeartSVG:hover path {
-	fill: #c0392b;
+  fill: #c0392b;
 }
 
 .ToolTip {
-	position: relative;
-	display: inline-block;
-	/*border-bottom: 1px dotted black;*/
+  position: relative;
+  display: inline-block;
+  /*border-bottom: 1px dotted black;*/
 }
 
 .ToolTipText {
-	visibility: hidden;
-	width: 110px;
-	background-color: rgba(0, 0, 0, 0.8);
-	color: #fff;
-	text-align: center;
-	border-radius: 6px;
-	padding: 5px 0;
-	position: absolute;
-	z-index: 1;
-	bottom: 150%;
-	left: 50%;
-	margin-left: -60px;
-	font-size: 14px;
+  visibility: hidden;
+  width: 110px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -60px;
+  font-size: 14px;
 }
 
 .ToolTipText::after {
-	content: "";
-	position: absolute;
-	top: 100%;
-	left: 50%;
-	margin-left: -5px;
-	border-width: 5px;
-	border-style: solid;
-	border-color: rgba(0, 0, 0, 0.8) transparent transparent transparent;
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.8) transparent transparent transparent;
 }
 
 .ToolTip:hover .ToolTipText {
-	visibility: visible;
+  visibility: visible;
 }
 
 .LeftInStockV1,
 .LeftInStockV2,
 .LeftInStockV3 {
-	font-size: 80%;
-	margin: 5px 10px;
-	padding-bottom: 5px;
+  font-size: 80%;
+  margin: 5px 10px;
+  padding-bottom: 5px;
 }
 
 .LeftInStockV1 {
-	color: #17693a;
+  color: #17693a;
 }
 .LeftInStockV2 {
-	color: #7b241b;
+  color: #7b241b;
 }
 .LeftInStockV3 {
-	color: #0e0e0e;
+  color: #0e0e0e;
 }
 
 /*--------WISHLIST DIALOG--------*/
 .DropDownWishList {
-	position: relative;
-	/*display: inline-block;*/
-	display: flex;
-	/*flex-flow: row;*/
-	flex-direction: column;
-	background-color: #e67e22;
+  position: relative;
+  /*display: inline-block;*/
+  display: flex;
+  /*flex-flow: row;*/
+  flex-direction: column;
+  background-color: #e67e22;
 }
 
 .DropDownWishListCategories {
-	display: none;
-	/*display: block;*/
-	position: absolute;
-	background-color: rgba(0, 0, 0, 0.8);
-	width: 225px;
-	height: 150px;
-	color: #fff;
-	text-align: center;
-	border-radius: 6px;
-	z-index: 1;
-	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-	overflow: auto;
-	margin-left: -95px;
+  display: none;
+  /*display: block;*/
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 225px;
+  height: 150px;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  z-index: 1;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  overflow: auto;
+  margin-left: -95px;
 }
 
 .DropDownWishListCategories::-webkit-scrollbar {
-	width: 0;
+  width: 0;
 }
 .DropDownWishListCategories {
-	overflow: -moz-scrollbars-none; /* Firefox */
-	-ms-overflow-style: none; /* IE */
+  overflow: -moz-scrollbars-none; /* Firefox */
+  -ms-overflow-style: none; /* IE */
 }
 
 .ToolTip:hover .DropDownWishListCategories {
-	display: block;
+  display: block;
 }
 
 .DropDownWishListCategoriesControl {
-	font-size: 50%;
-	/*width: 100px;*/
-	width: 90%;
-	height: 10px;
-	/*background-color: #2ecc71;*/
-	/*display: flex;*/
-	/*justify-content: flex-end;*/
-	margin: 0 5%;
-	/*align-content: center;*/
-	/*align-items: center;*/
+  font-size: 50%;
+  /*width: 100px;*/
+  width: 90%;
+  height: 10px;
+  /*background-color: #2ecc71;*/
+  /*display: flex;*/
+  /*justify-content: flex-end;*/
+  margin: 0 5%;
+  /*align-content: center;*/
+  /*align-items: center;*/
 }
 
 /*.DropDownWishListCategoriesControls{*/
@@ -243,84 +243,84 @@
 /*}*/
 
 .WishListMenu {
-	font-size: 150%;
-	cursor: pointer;
+  font-size: 150%;
+  cursor: pointer;
 }
 
 .BackWard {
-	left: 0;
-	margin: 0 100px;
-	/*margin-bottom: -25px;*/
-	padding: 0;
-	/*background-color: #3b5998;*/
-	/*text-align: left;*/
-	cursor: pointer;
+  left: 0;
+  margin: 0 100px;
+  /*margin-bottom: -25px;*/
+  padding: 0;
+  /*background-color: #3b5998;*/
+  /*text-align: left;*/
+  cursor: pointer;
 }
 
 .CategoryForm {
-	display: flex;
-	flex-flow: column;
-	width: 100%;
-	/*background-color: #3b5998;*/
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+  /*background-color: #3b5998;*/
 }
 
 .CategoryCreateButton {
-	/*width: 120px;*/
-	align-self: center;
-	display: flex;
-	/*background-color: #2ecc71;*/
+  /*width: 120px;*/
+  align-self: center;
+  display: flex;
+  /*background-color: #2ecc71;*/
 }
 
 .Modal {
-	height: 350px;
-	width: 100%;
-	display: flex;
-	flex-direction: column;
-	padding-bottom: 20px;
+  height: 350px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 20px;
 }
 .ModalImg {
-	width: 100%;
+  width: 100%;
 }
 .Modal img {
-	width: 100%;
-	height: 250px;
-	opacity: 1;
-	display: block;
-	transition: 0.5s ease;
-	backface-visibility: hidden;
-	border-radius: 10px;
-	object-fit: cover;
+  width: 100%;
+  height: 250px;
+  opacity: 1;
+  display: block;
+  transition: 0.5s ease;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  object-fit: cover;
 }
 
 .ModalDescription {
-	display: flex;
-	align-items: flex-start;
-	justify-content: space-between;
-	padding-top: 10px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding-top: 10px;
 }
 
 .ModalTitle {
-	font-size: 18px;
-	font-weight: 700;
-	margin-top: 5px;
-	width: 70%;
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 5px;
+  width: 70%;
 }
 .ModalPrice {
-	font-size: 18px;
-	font-weight: 700;
+  font-size: 18px;
+  font-weight: 700;
 }
 .ModalRating {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	font-size: 18px;
-	margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 18px;
+  margin-top: 10px;
 }
 .ModalRatingNumber {
 }
 .ModalDescriptionText {
-	font-size: 18px;
-	margin-top: 10px;
-	color: rgb(84, 83, 83);
-	margin-bottom: 10px;
+  font-size: 18px;
+  margin-top: 10px;
+  color: rgb(84, 83, 83);
+  margin-bottom: 10px;
 }

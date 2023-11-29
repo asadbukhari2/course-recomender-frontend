@@ -1,73 +1,73 @@
 .SideDrawer {
-	display: flex;
-	flex-flow: column;
-	position: fixed;
-	width: 280px;
-	max-width: 70%;
-	height: 100%;
-	left: 0;
-	top: 0;
-	/*top: 10.8%;*/
-	z-index: 200;
-	background-color: #bdc3c7;
-	padding: 32px 16px;
-	box-sizing: border-box;
-	transition: transform 0.3s ease-out;
-	overflow: hidden;
+  display: flex;
+  flex-flow: column;
+  position: fixed;
+  width: 280px;
+  max-width: 70%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  /*top: 10.8%;*/
+  z-index: 200;
+  background-color: #bdc3c7;
+  padding: 32px 16px;
+  box-sizing: border-box;
+  transition: transform 0.3s ease-out;
+  overflow: hidden;
 }
 
 .Open {
-	transform: translateX(0);
+  transform: translateX(0);
 }
 
 .Close {
-	transform: translateX(-100%);
+  transform: translateX(-100%);
 }
 
 .SideDrawerClose {
-	display: flex;
-	justify-content: flex-end;
-	font-size: 18px;
-	font-weight: bolder;
-	/*background-color: #e74c3c;*/
+  display: flex;
+  justify-content: flex-end;
+  font-size: 18px;
+  font-weight: bolder;
+  /*background-color: #e74c3c;*/
 }
 
 .SideDrawerCloseDiv {
-	width: 50px;
-	color: #e74c3c;
-	cursor: pointer;
-	/*background-color: #e67e22;*/
+  width: 50px;
+  color: #e74c3c;
+  cursor: pointer;
+  /*background-color: #e67e22;*/
 }
 
 .SideDrawerClose:after {
-	display: none;
+  display: none;
 }
 
 .DSTitle {
-	color: #060606;
+  color: #060606;
 }
 
 .Controller {
-	width: 250px;
-	height: auto;
-	/*height: 450px;*/
-	display: flex;
-	flex-flow: column;
-	align-items: center;
-	justify-content: center;
-	border-radius: 20px;
-	background-color: rgba(255, 255, 255, 0.22);
+  width: 250px;
+  height: auto;
+  /*height: 450px;*/
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.22);
 }
 
 .Select {
-	width: 230px;
-	height: auto;
-	/*height: 125px;*/
-	display: flex;
-	flex-flow: column;
-	align-items: center;
-	margin-top: 10px;
-	/*background-color: #3b5998;*/
+  width: 230px;
+  height: auto;
+  /*height: 125px;*/
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  margin-top: 10px;
+  /*background-color: #3b5998;*/
 }
 
 /*.Select:first-of-type{*/
@@ -75,20 +75,20 @@
 /*}*/
 
 .Select select {
-	padding: 5px 10px;
-	box-sizing: border-box;
-	width: 100%;
-	margin: 0 0 10px 0;
-	border: 3px solid #ccc;
-	-webkit-transition: 0.5s;
-	transition: 0.5s;
-	outline: none;
-	border-radius: 10px;
+  padding: 5px 10px;
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0 0 10px 0;
+  border: 3px solid #ccc;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+  border-radius: 10px;
 }
 
 .SubmitButton {
-	margin-top: 5px;
-	width: 100px;
-	font-size: 60%;
-	padding-bottom: 25px;
+  margin-top: 5px;
+  width: 100px;
+  font-size: 60%;
+  padding-bottom: 25px;
 }

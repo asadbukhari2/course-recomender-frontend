@@ -9,15 +9,15 @@ import MainSlider from "../../components/MainSlider/MainSlider";
 import About from "../../components/About/About";
 
 function MainView(props) {
-	return (
-		<Aux>
-			<MainSlider />
+  return (
+    <Aux>
+      <MainSlider />
 
-			<Categories />
+      <Categories />
 
-			<About />
-		</Aux>
-	);
+      <About />
+    </Aux>
+  );
 }
 
 export default MainView;

@@ -1,74 +1,74 @@
 .ToolbarScrolled,
 .Toolbar {
-	height: 70px;
-	width: 100%;
-	position: fixed;
-	top: 0;
-	left: 0;
-	align-items: center;
-	background-color: #bdc3c7;
-	display: flex;
-	justify-content: space-between;
-	padding: 0 20px;
-	box-sizing: border-box;
-	z-index: 90;
-	border-bottom: 1px solid #fdfdfe;
+  height: 70px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  align-items: center;
+  background-color: #bdc3c7;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+  box-sizing: border-box;
+  z-index: 90;
+  border-bottom: 1px solid #fdfdfe;
 }
 
 .ToolbarScrolled {
-	/*display: none;*/
-	opacity: 0;
-	transition: 30s all;
-	animation-name: fade;
-	animation-duration: 500ms;
-	animation-fill-mode: forwards;
+  /*display: none;*/
+  opacity: 0;
+  transition: 30s all;
+  animation-name: fade;
+  animation-duration: 500ms;
+  animation-fill-mode: forwards;
 }
 
 .Logo {
-	/*width: 100px;*/
-	/* height: 80px; */
-	height: auto;
-	/*background-color: #3b5998;*/
+  /*width: 100px;*/
+  /* height: 80px; */
+  height: auto;
+  /*background-color: #3b5998;*/
 }
 
 .Cart {
-	height: 90%;
+  height: 90%;
 }
 
 /* Animation Effects */
 @keyframes fade {
-	from {
-		opacity: 1;
-	}
-	to {
-		opacity: 0;
-	}
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }
 
 .DesktopOnly {
-	width: 400px;
-	display: flex;
-	/*background-color: #2f3640;*/
+  width: 400px;
+  display: flex;
+  /*background-color: #2f3640;*/
 }
 
 @media only screen and (max-width: 768px) {
-	.Toolbar {
-		height: 70px;
-		padding: 0 10px;
-	}
+  .Toolbar {
+    height: 70px;
+    padding: 0 10px;
+  }
 }
 
 @media only screen and (max-width: 767px) and (min-width: 501px) {
-	.Logo {
-		margin-left: 125px;
-		/*padding-left: 50px;*/
-	}
+  .Logo {
+    margin-left: 125px;
+    /*padding-left: 50px;*/
+  }
 }
 
 @media only screen and (max-width: 767px) {
-	.DesktopOnly {
-		display: none;
-	}
+  .DesktopOnly {
+    display: none;
+  }
 
-	/*.Toolbar{ padding-left: 50px;}*/
+  /*.Toolbar{ padding-left: 50px;}*/
 }

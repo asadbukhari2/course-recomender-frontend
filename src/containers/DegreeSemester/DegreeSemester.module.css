@@ -1,66 +1,66 @@
 .DegreeSemester {
-	height: 750px;
-	overflow: hidden;
-	display: flex;
-	flex-flow: column;
-	align-items: center;
-	/*justify-content: center;*/
-	/*padding-top: 100px;*/
-	/*background-color: #bdc3c7;*/
+  height: 750px;
+  overflow: hidden;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  /*justify-content: center;*/
+  /*padding-top: 100px;*/
+  /*background-color: #bdc3c7;*/
 }
 
 .Title {
-	color: white;
+  color: white;
 }
 
 .Title:after {
-	/*display: none;*/
-	background-color: white;
-	margin-top: 20px;
+  /*display: none;*/
+  background-color: white;
+  margin-top: 20px;
 }
 
 .DSTitle {
-	color: white;
+  color: white;
 }
 
 .Controller {
-	width: 40%;
-	height: 250px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	border-radius: 20px;
-	background-color: rgba(255, 255, 255, 0.2);
+  width: 40%;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .Select {
-	width: 300px;
-	height: 125px;
-	display: flex;
-	flex-flow: column;
-	align-items: center;
-	/*background-color: #3b5998;*/
+  width: 300px;
+  height: 125px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  /*background-color: #3b5998;*/
 }
 
 .Select:first-of-type {
-	margin-right: 15px;
+  margin-right: 15px;
 }
 
 .Select select {
-	padding: 5px 10px;
-	box-sizing: border-box;
-	width: 100%;
-	margin: 10px 0;
-	border: 3px solid #ccc;
-	-webkit-transition: 0.5s;
-	transition: 0.5s;
-	outline: none;
-	border-radius: 10px;
+  padding: 5px 10px;
+  box-sizing: border-box;
+  width: 100%;
+  margin: 10px 0;
+  border: 3px solid #ccc;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+  border-radius: 10px;
 }
 
 .SubmitButton {
-	margin-top: 25px;
-	width: 150px;
-	font-size: 90%;
-	/*background-color: #e67e22;*/
+  margin-top: 25px;
+  width: 150px;
+  font-size: 90%;
+  /*background-color: #e67e22;*/
 }

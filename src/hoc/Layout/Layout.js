@@ -7,40 +7,40 @@ import SideDrawer from "../../components/Navigation/Side Drawer/SideDrawer";
 import Footer from "../../components/Footer/Footer";
 
 function Layout(props) {
-	const [sideDrawerIsVisible, setSideDrawerIsVisible] = useState(false);
+  const [sideDrawerIsVisible, setSideDrawerIsVisible] = useState(false);
 
-	const sideDrawerOpenHandler = e => {
-		e.stopPropagation();
-	};
+  const sideDrawerOpenHandler = (e) => {
+    e.stopPropagation();
+  };
 
-	const sideDrawerClosedHandler = () => {
-		setSideDrawerIsVisible(false);
-	};
+  const sideDrawerClosedHandler = () => {
+    setSideDrawerIsVisible(false);
+  };
 
-	const sideDrawerToggleHandler = () => {
-		setSideDrawerIsVisible(!sideDrawerIsVisible);
-	};
+  const sideDrawerToggleHandler = () => {
+    setSideDrawerIsVisible(!sideDrawerIsVisible);
+  };
 
-	return (
-		<Aux>
-			<Toolbar
-				isAuth={props.isAuthenticated}
-				drawerToggleClicked={sideDrawerToggleHandler}
-				isSideDrawerVisible={sideDrawerIsVisible}
-			/>
+  return (
+    <Aux>
+      <Toolbar
+        isAuth={props.isAuthenticated}
+        drawerToggleClicked={sideDrawerToggleHandler}
+        isSideDrawerVisible={sideDrawerIsVisible}
+      />
 
-			<SideDrawer
-				isAuth={props.isAuthenticated}
-				open={sideDrawerIsVisible}
-				closed={sideDrawerClosedHandler}
-				opened={sideDrawerOpenHandler}
-			/>
+      <SideDrawer
+        isAuth={props.isAuthenticated}
+        open={sideDrawerIsVisible}
+        closed={sideDrawerClosedHandler}
+        opened={sideDrawerOpenHandler}
+      />
 
-			<main className={classes.Content}>{props.children}</main>
+      <main className={classes.Content}>{props.children}</main>
 
-			<Footer />
-		</Aux>
-	);
+      <Footer />
+    </Aux>
+  );
 }
 
 export default Layout;

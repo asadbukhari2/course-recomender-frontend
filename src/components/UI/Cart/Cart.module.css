@@ -1,149 +1,149 @@
 .NavIcons {
-	display: flex;
-	/*justify-content: flex-end;*/
-	/*right: inherit;*/
-	/*text-align: left;*/
-	list-style: none;
-	/*background-color: #e3301e;*/
-	/*text-align: center;*/
-	/*overflow: hidden;*/
-	cursor: pointer;
+  display: flex;
+  /*justify-content: flex-end;*/
+  /*right: inherit;*/
+  /*text-align: left;*/
+  list-style: none;
+  /*background-color: #e3301e;*/
+  /*text-align: center;*/
+  /*overflow: hidden;*/
+  cursor: pointer;
 }
 
 .Cart {
-	/*background-color: red;*/
-	width: auto;
-	/*height: auto;*/
-	padding: 5px;
-	margin-top: 5px;
-	/*margin: -2px 15px 0 0;*/
-	/*font-size: 17px;*/
-	border: none;
-	background: none;
+  /*background-color: red;*/
+  width: auto;
+  /*height: auto;*/
+  padding: 5px;
+  margin-top: 5px;
+  /*margin: -2px 15px 0 0;*/
+  /*font-size: 17px;*/
+  border: none;
+  background: none;
 }
 
 .Cart:focus {
-	outline: none;
+  outline: none;
 }
 
 .Cart p {
-	color: #060606;
+  color: #060606;
 }
 
 .CartDescription {
-	/*margin-left: 2px;*/
-	/*padding-left: 3px;*/
-	/*font-size: 17px;*/
-	width: 80px;
-	letter-spacing: 1px;
-	line-height: 1.1;
+  /*margin-left: 2px;*/
+  /*padding-left: 3px;*/
+  /*font-size: 17px;*/
+  width: 80px;
+  letter-spacing: 1px;
+  line-height: 1.1;
 }
 
 .Text {
-	margin-top: 5px;
-	font-size: 65%;
-	line-height: 0.8rem;
-	/*text-align: center;*/
+  margin-top: 5px;
+  font-size: 65%;
+  line-height: 0.8rem;
+  /*text-align: center;*/
 }
 .cart {
-	font-size: 18px;
-	font-weight: 500;
+  font-size: 18px;
+  font-weight: 500;
 }
 /*.Text:hover{*/
 /*    color: #e3301e;*/
 /*}*/
 
 .DropDownCart {
-	position: relative;
-	/*display: inline-block;*/
-	display: flex;
-	flex-direction: column;
-	margin-top: 5px;
+  position: relative;
+  /*display: inline-block;*/
+  display: flex;
+  flex-direction: column;
+  margin-top: 5px;
 }
 
 .DropDownCartDetailV2,
 .DropDownCartDetail {
-	display: none;
-	position: absolute;
-	background-color: rgba(0, 0, 0, 0.8);
-	width: 300px;
-	color: #fff;
-	text-align: center;
-	border-radius: 6px;
-	padding: 5px 0;
-	z-index: 1;
-	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-	overflow: visible;
-	top: 100%;
-	left: 50%;
-	margin-left: -200px;
+  display: none;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 300px;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  z-index: 1;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  overflow: visible;
+  top: 100%;
+  left: 50%;
+  margin-left: -200px;
 }
 
 .DropDownCartDetailV2::after,
 .DropDownCartDetail::after {
-	content: "";
-	/*position: absolute;*/
-	position: absolute;
-	/*top: 100%;*/
-	width: 2px;
-	/*height: 10px;*/
-	top: -2.5%;
-	left: 70%;
-	margin-left: -5px;
-	border-width: 5px;
-	border-style: solid;
-	/*border-color: rgba(255, 255, 0, 0.8) transparent transparent transparent;*/
-	border-color: transparent transparent rgba(0, 0, 0, 0.8) transparent;
+  content: "";
+  /*position: absolute;*/
+  position: absolute;
+  /*top: 100%;*/
+  width: 2px;
+  /*height: 10px;*/
+  top: -2.5%;
+  left: 70%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  /*border-color: rgba(255, 255, 0, 0.8) transparent transparent transparent;*/
+  border-color: transparent transparent rgba(0, 0, 0, 0.8) transparent;
 }
 
 .DropDownCartDetailV2 {
-	margin-left: -270px;
+  margin-left: -270px;
 }
 .DropDownCartDetailV2::after {
-	margin-left: 55px;
+  margin-left: 55px;
 }
 
 .NavIcons:hover .DropDownCartDetail,
 .NavIcons:hover .DropDownCartDetailV2 {
-	display: block;
+  display: block;
 }
 
 .DropDownCartDetailItems {
-	/*height: 50px;*/
-	height: 300px;
-	/*background-color: #e67e22;*/
-	margin: 5px 10px;
-	overflow-y: auto;
-	/*overflow: overlay;*/
-	flex: 1;
+  /*height: 50px;*/
+  height: 300px;
+  /*background-color: #e67e22;*/
+  margin: 5px 10px;
+  overflow-y: auto;
+  /*overflow: overlay;*/
+  flex: 1;
 }
 
 .DropDownCartDetailItems::-webkit-scrollbar {
-	width: 0;
+  width: 0;
 }
 .DropDownCartDetailItems {
-	overflow: -moz-scrollbars-none; /* Firefox */
-	-ms-overflow-style: none; /* IE */
+  overflow: -moz-scrollbars-none; /* Firefox */
+  -ms-overflow-style: none; /* IE */
 }
 
 /*.DropDownButton,*/
 .DropDownButtons {
-	/*position: absolute;*/
-	/*background-color: #e3301e;*/
-	/*width: 125px;*/
-	/*height: 50px;*/
-	/*margin: 25px 10px;*/
-	/*font-size: 14px;*/
-	height: 75px;
-	font-size: 80%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	/*background-color: #e67e22;*/
+  /*position: absolute;*/
+  /*background-color: #e3301e;*/
+  /*width: 125px;*/
+  /*height: 50px;*/
+  /*margin: 25px 10px;*/
+  /*font-size: 14px;*/
+  height: 75px;
+  font-size: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*background-color: #e67e22;*/
 }
 
 .DropDownButtons div:last-of-type {
-	margin-left: 15px;
+  margin-left: 15px;
 }
 
 /*.DropDownButton{*/
@@ -151,7 +151,7 @@
 /*}*/
 
 .NoneDisplay {
-	display: none;
+  display: none;
 }
 
 /*.Cart{*/
@@ -171,76 +171,76 @@
 /*}*/
 
 .BagSVG path {
-	transition: 250ms;
+  transition: 250ms;
 }
 
 .BagSVG:hover path {
-	fill: #bdc3c7;
+  fill: #bdc3c7;
 }
 
 .SvgBag {
-	/*background-color: #e57dff;*/
+  /*background-color: #e57dff;*/
 }
 
 .SvgBagItems {
-	/*position: fixed;*/
-	margin-top: -27px;
-	margin-right: -25px;
-	/*border-radius: 50px;*/
-	/*background-color: #e74c3c;*/
-	z-index: 99999;
+  /*position: fixed;*/
+  margin-top: -27px;
+  margin-right: -25px;
+  /*border-radius: 50px;*/
+  /*background-color: #e74c3c;*/
+  z-index: 99999;
 }
 
 @media only screen and (max-width: 768px) {
-	.Cart {
-		margin: 0 2px;
-	}
+  .Cart {
+    margin: 0 2px;
+  }
 }
 
 @media only screen and (max-width: 600px) {
-	.Cart {
-		margin: 0 3px;
-	}
+  .Cart {
+    margin: 0 3px;
+  }
 }
 
 @media only screen and (max-width: 480px) {
-	.DropDownCartDetailV2,
-	.DropDownCartDetail {
-		width: 250px;
-		margin-left: -220px;
-	}
+  .DropDownCartDetailV2,
+  .DropDownCartDetail {
+    width: 250px;
+    margin-left: -220px;
+  }
 
-	.DropDownCartDetailV2::after,
-	.DropDownCartDetail::after {
-		margin-left: 40px;
-	}
+  .DropDownCartDetailV2::after,
+  .DropDownCartDetail::after {
+    margin-left: 40px;
+  }
 
-	.DropDownButtons {
-		font-size: 60%;
-	}
+  .DropDownButtons {
+    font-size: 60%;
+  }
 
-	.Cart {
-		margin: 0 -10px;
-	}
+  .Cart {
+    margin: 0 -10px;
+  }
 }
 
 @media only screen and (max-width: 320px) {
-	.DropDownCartDetailV2,
-	.DropDownCartDetail {
-		width: 200px;
-		margin-left: -170px;
-	}
+  .DropDownCartDetailV2,
+  .DropDownCartDetail {
+    width: 200px;
+    margin-left: -170px;
+  }
 
-	.DropDownCartDetailV2::after,
-	.DropDownCartDetail::after {
-		margin-left: 25px;
-	}
+  .DropDownCartDetailV2::after,
+  .DropDownCartDetail::after {
+    margin-left: 25px;
+  }
 
-	.DropDownButtons {
-		font-size: 50%;
-	}
+  .DropDownButtons {
+    font-size: 50%;
+  }
 
-	.Cart {
-		margin: 0 -10px;
-	}
+  .Cart {
+    margin: 0 -10px;
+  }
 }

@@ -1,36 +1,36 @@
 .Modal {
-	position: fixed; /* Stay in place */
-	z-index: 500; /* Sit on top */
-	left: 10%;
-	top: 15%;
-	width: 80%; /* Full width */
-	height: 75%; /* Full height */
-	padding: 0;
-	margin: 0;
-	overflow: auto; /* Enable scroll if needed */
+  position: fixed; /* Stay in place */
+  z-index: 500; /* Sit on top */
+  left: 10%;
+  top: 15%;
+  width: 80%; /* Full width */
+  height: 75%; /* Full height */
+  padding: 0;
+  margin: 0;
+  overflow: auto; /* Enable scroll if needed */
 }
 
 .ModalContent {
-	background-color: #fefefe;
-	margin: 0;
-	/*padding: 20px 20px 20px 420px;*/
-	/*padding: 20px;*/
-	padding: 0;
-	border: 1px solid #888;
-	left: 0;
-	top: 15%;
-	width: 100%;
-	height: 100%;
-	overflow-y: auto;
-	/*background-color: #e74c3c;*/
+  background-color: #fefefe;
+  margin: 0;
+  /*padding: 20px 20px 20px 420px;*/
+  /*padding: 20px;*/
+  padding: 0;
+  border: 1px solid #888;
+  left: 0;
+  top: 15%;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  /*background-color: #e74c3c;*/
 }
 
 .ModalContent::-webkit-scrollbar {
-	width: 0;
+  width: 0;
 }
 .ModalContent {
-	overflow: -moz-scrollbars-none; /* Firefox */
-	-ms-overflow-style: none; /* IE */
+  overflow: -moz-scrollbars-none; /* Firefox */
+  -ms-overflow-style: none; /* IE */
 }
 
 /*@media only screen and (max-width: 1900px){*/
